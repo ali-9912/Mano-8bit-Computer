@@ -1,0 +1,26 @@
+//8 bit Accumulator 
+module Accumulator(I,Clock,LD,INCR,CL,W);
+  input [7:0] I ;
+  input Clock,LD,INCR,CL ;
+  output reg [7:0] W;
+  reg [7:0] ac ;
+  
+  always @(posedge Clock)
+    begin
+      if(LD) 
+       begin
+        ac<=I ;
+        W<=ac;
+       end
+      else if(INCR)
+        begin
+         ac<=ac+1 ;
+         W<=ac ;
+        end
+      else if(CL) 
+        begin 
+         ac<=0 ;
+         W<=ac ;
+        end
+    end
+endmodule 

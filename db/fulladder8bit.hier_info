@@ -1,0 +1,117 @@
+|fulladder8bit
+Sum[0] <= fulladder:bit0.port0
+Sum[1] <= fulladder:bit1.port0
+Sum[2] <= fulladder:bit2.port0
+Sum[3] <= fulladder:bit3.port0
+Sum[4] <= fulladder:bit4.port0
+Sum[5] <= fulladder:bit5.port0
+Sum[6] <= fulladder:bit6.port0
+Sum[7] <= fulladder:bit7.port0
+E <= fulladder:bit7.port1
+AC[0] => AC[0].IN1
+AC[1] => AC[1].IN1
+AC[2] => AC[2].IN1
+AC[3] => AC[3].IN1
+AC[4] => AC[4].IN1
+AC[5] => AC[5].IN1
+AC[6] => AC[6].IN1
+AC[7] => AC[7].IN1
+X[0] => X[0].IN1
+X[1] => X[1].IN1
+X[2] => X[2].IN1
+X[3] => X[3].IN1
+X[4] => X[4].IN1
+X[5] => X[5].IN1
+X[6] => X[6].IN1
+X[7] => X[7].IN1
+C_in => C_in.IN1
+
+
+|fulladder8bit|fulladder:bit0
+Sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => s1.IN0
+A => c1.IN0
+B => s1.IN1
+B => c1.IN1
+C_in => comb.IN1
+C_in => s2.IN1
+
+
+|fulladder8bit|fulladder:bit1
+Sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => s1.IN0
+A => c1.IN0
+B => s1.IN1
+B => c1.IN1
+C_in => comb.IN1
+C_in => s2.IN1
+
+
+|fulladder8bit|fulladder:bit2
+Sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => s1.IN0
+A => c1.IN0
+B => s1.IN1
+B => c1.IN1
+C_in => comb.IN1
+C_in => s2.IN1
+
+
+|fulladder8bit|fulladder:bit3
+Sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => s1.IN0
+A => c1.IN0
+B => s1.IN1
+B => c1.IN1
+C_in => comb.IN1
+C_in => s2.IN1
+
+
+|fulladder8bit|fulladder:bit4
+Sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => s1.IN0
+A => c1.IN0
+B => s1.IN1
+B => c1.IN1
+C_in => comb.IN1
+C_in => s2.IN1
+
+
+|fulladder8bit|fulladder:bit5
+Sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => s1.IN0
+A => c1.IN0
+B => s1.IN1
+B => c1.IN1
+C_in => comb.IN1
+C_in => s2.IN1
+
+
+|fulladder8bit|fulladder:bit6
+Sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => s1.IN0
+A => c1.IN0
+B => s1.IN1
+B => c1.IN1
+C_in => comb.IN1
+C_in => s2.IN1
+
+
+|fulladder8bit|fulladder:bit7
+Sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => s1.IN0
+A => c1.IN0
+B => s1.IN1
+B => c1.IN1
+C_in => comb.IN1
+C_in => s2.IN1
+
+

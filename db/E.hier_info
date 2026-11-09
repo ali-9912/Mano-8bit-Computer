@@ -1,0 +1,5 @@
+|E
+I => Q.DATAIN
+Q <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+

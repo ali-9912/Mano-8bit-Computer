@@ -1,0 +1,432 @@
+Simulator report for data_memory
+Wed Jan 25 19:17:58 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ALTSYNCRAM
+  6. Coverage Summary
+  7. Complete 1/0-Value Coverage
+  8. Missing 1-Value Coverage
+  9. Missing 0-Value Coverage
+ 10. Simulator INI Usage
+ 11. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 173 nodes    ;
+; Simulation Coverage         ;       0.00 % ;
+; Total Number of Transitions ; 0            ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                       ;
++--------------------------------------------------------------------------------------------+---------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                     ; Default Value ;
++--------------------------------------------------------------------------------------------+---------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                  ; Timing        ;
+; Start time                                                                                 ; 0 ns                                        ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                         ;               ;
+; Vector input source                                                                        ; E:/Program Files/FPGA/project/Waveform4.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                          ; On            ;
+; Check outputs                                                                              ; Off                                         ; Off           ;
+; Report simulation coverage                                                                 ; On                                          ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                          ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                          ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                          ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                         ; Off           ;
+; Detect glitches                                                                            ; Off                                         ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                         ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                         ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                         ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                         ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                          ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                  ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                         ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                        ; Auto          ;
++--------------------------------------------------------------------------------------------+---------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++-----------------------------------------------------------------------------+
+; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ALTSYNCRAM ;
++-----------------------------------------------------------------------------+
+Please refer to fitter text-based report (*.fit.rpt) to view logical memory report content in ASCII.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       0.00 % ;
+; Total nodes checked                                 ; 173          ;
+; Total output ports checked                          ; 52           ;
+; Total output ports with complete 1/0-value coverage ; 0            ;
+; Total output ports with no 1/0-value coverage       ; 52           ;
+; Total output ports with no 1-value coverage         ; 52           ;
+; Total output ports with no 0-value coverage         ; 52           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-------------------------------------------------+
+; Complete 1/0-Value Coverage                     ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                         ;
++-------------------------------------------------------------------------------+-------------------------------------------------------------------------------+------------------+
+; Node Name                                                                     ; Output Port Name                                                              ; Output Port Type ;
++-------------------------------------------------------------------------------+-------------------------------------------------------------------------------+------------------+
+; |data_memory|mem~0                                                            ; |data_memory|mem~0                                                            ; out              ;
+; |data_memory|Dataout[0]~en                                                    ; |data_memory|Dataout[0]~en                                                    ; regout           ;
+; |data_memory|Dataout[0]~0                                                     ; |data_memory|Dataout[0]~0                                                     ; out              ;
+; |data_memory|Dataout[1]~en                                                    ; |data_memory|Dataout[1]~en                                                    ; regout           ;
+; |data_memory|Dataout[1]~1                                                     ; |data_memory|Dataout[1]~1                                                     ; out              ;
+; |data_memory|Dataout[2]~en                                                    ; |data_memory|Dataout[2]~en                                                    ; regout           ;
+; |data_memory|Dataout[2]~2                                                     ; |data_memory|Dataout[2]~2                                                     ; out              ;
+; |data_memory|Dataout[3]~en                                                    ; |data_memory|Dataout[3]~en                                                    ; regout           ;
+; |data_memory|Dataout[3]~3                                                     ; |data_memory|Dataout[3]~3                                                     ; out              ;
+; |data_memory|Dataout[4]~en                                                    ; |data_memory|Dataout[4]~en                                                    ; regout           ;
+; |data_memory|Dataout[4]~4                                                     ; |data_memory|Dataout[4]~4                                                     ; out              ;
+; |data_memory|Dataout[5]~en                                                    ; |data_memory|Dataout[5]~en                                                    ; regout           ;
+; |data_memory|Dataout[5]~5                                                     ; |data_memory|Dataout[5]~5                                                     ; out              ;
+; |data_memory|Dataout[6]~en                                                    ; |data_memory|Dataout[6]~en                                                    ; regout           ;
+; |data_memory|Dataout[6]~6                                                     ; |data_memory|Dataout[6]~6                                                     ; out              ;
+; |data_memory|Dataout[7]~7                                                     ; |data_memory|Dataout[7]~7                                                     ; out0             ;
+; |data_memory|Dataout[7]~en                                                    ; |data_memory|Dataout[7]~en                                                    ; regout           ;
+; |data_memory|Dataout[7]~8                                                     ; |data_memory|Dataout[7]~8                                                     ; out              ;
+; |data_memory|Address[0]                                                       ; |data_memory|Address[0]                                                       ; out              ;
+; |data_memory|Address[1]                                                       ; |data_memory|Address[1]                                                       ; out              ;
+; |data_memory|Address[2]                                                       ; |data_memory|Address[2]                                                       ; out              ;
+; |data_memory|Address[3]                                                       ; |data_memory|Address[3]                                                       ; out              ;
+; |data_memory|Address[4]                                                       ; |data_memory|Address[4]                                                       ; out              ;
+; |data_memory|Address[5]                                                       ; |data_memory|Address[5]                                                       ; out              ;
+; |data_memory|Address[6]                                                       ; |data_memory|Address[6]                                                       ; out              ;
+; |data_memory|Read                                                             ; |data_memory|Read                                                             ; out              ;
+; |data_memory|Write                                                            ; |data_memory|Write                                                            ; out              ;
+; |data_memory|Datain[0]                                                        ; |data_memory|Datain[0]                                                        ; out              ;
+; |data_memory|Datain[1]                                                        ; |data_memory|Datain[1]                                                        ; out              ;
+; |data_memory|Datain[2]                                                        ; |data_memory|Datain[2]                                                        ; out              ;
+; |data_memory|Datain[3]                                                        ; |data_memory|Datain[3]                                                        ; out              ;
+; |data_memory|Datain[4]                                                        ; |data_memory|Datain[4]                                                        ; out              ;
+; |data_memory|Datain[5]                                                        ; |data_memory|Datain[5]                                                        ; out              ;
+; |data_memory|Datain[6]                                                        ; |data_memory|Datain[6]                                                        ; out              ;
+; |data_memory|Datain[7]                                                        ; |data_memory|Datain[7]                                                        ; out              ;
+; |data_memory|Clock                                                            ; |data_memory|Clock                                                            ; out              ;
+; |data_memory|Dataout[0]                                                       ; |data_memory|Dataout[0]                                                       ; pin_out          ;
+; |data_memory|Dataout[1]                                                       ; |data_memory|Dataout[1]                                                       ; pin_out          ;
+; |data_memory|Dataout[2]                                                       ; |data_memory|Dataout[2]                                                       ; pin_out          ;
+; |data_memory|Dataout[3]                                                       ; |data_memory|Dataout[3]                                                       ; pin_out          ;
+; |data_memory|Dataout[4]                                                       ; |data_memory|Dataout[4]                                                       ; pin_out          ;
+; |data_memory|Dataout[5]                                                       ; |data_memory|Dataout[5]                                                       ; pin_out          ;
+; |data_memory|Dataout[6]                                                       ; |data_memory|Dataout[6]                                                       ; pin_out          ;
+; |data_memory|Dataout[7]                                                       ; |data_memory|Dataout[7]                                                       ; pin_out          ;
+; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a0 ; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a0 ; portbdataout0    ;
+; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a1 ; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a1 ; portbdataout0    ;
+; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a2 ; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a2 ; portbdataout0    ;
+; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a3 ; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a3 ; portbdataout0    ;
+; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a4 ; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a4 ; portbdataout0    ;
+; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a5 ; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a5 ; portbdataout0    ;
+; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a6 ; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a6 ; portbdataout0    ;
+; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a7 ; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a7 ; portbdataout0    ;
++-------------------------------------------------------------------------------+-------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                         ;
++-------------------------------------------------------------------------------+-------------------------------------------------------------------------------+------------------+
+; Node Name                                                                     ; Output Port Name                                                              ; Output Port Type ;
++-------------------------------------------------------------------------------+-------------------------------------------------------------------------------+------------------+
+; |data_memory|mem~0                                                            ; |data_memory|mem~0                                                            ; out              ;
+; |data_memory|Dataout[0]~en                                                    ; |data_memory|Dataout[0]~en                                                    ; regout           ;
+; |data_memory|Dataout[0]~0                                                     ; |data_memory|Dataout[0]~0                                                     ; out              ;
+; |data_memory|Dataout[1]~en                                                    ; |data_memory|Dataout[1]~en                                                    ; regout           ;
+; |data_memory|Dataout[1]~1                                                     ; |data_memory|Dataout[1]~1                                                     ; out              ;
+; |data_memory|Dataout[2]~en                                                    ; |data_memory|Dataout[2]~en                                                    ; regout           ;
+; |data_memory|Dataout[2]~2                                                     ; |data_memory|Dataout[2]~2                                                     ; out              ;
+; |data_memory|Dataout[3]~en                                                    ; |data_memory|Dataout[3]~en                                                    ; regout           ;
+; |data_memory|Dataout[3]~3                                                     ; |data_memory|Dataout[3]~3                                                     ; out              ;
+; |data_memory|Dataout[4]~en                                                    ; |data_memory|Dataout[4]~en                                                    ; regout           ;
+; |data_memory|Dataout[4]~4                                                     ; |data_memory|Dataout[4]~4                                                     ; out              ;
+; |data_memory|Dataout[5]~en                                                    ; |data_memory|Dataout[5]~en                                                    ; regout           ;
+; |data_memory|Dataout[5]~5                                                     ; |data_memory|Dataout[5]~5                                                     ; out              ;
+; |data_memory|Dataout[6]~en                                                    ; |data_memory|Dataout[6]~en                                                    ; regout           ;
+; |data_memory|Dataout[6]~6                                                     ; |data_memory|Dataout[6]~6                                                     ; out              ;
+; |data_memory|Dataout[7]~7                                                     ; |data_memory|Dataout[7]~7                                                     ; out0             ;
+; |data_memory|Dataout[7]~en                                                    ; |data_memory|Dataout[7]~en                                                    ; regout           ;
+; |data_memory|Dataout[7]~8                                                     ; |data_memory|Dataout[7]~8                                                     ; out              ;
+; |data_memory|Address[0]                                                       ; |data_memory|Address[0]                                                       ; out              ;
+; |data_memory|Address[1]                                                       ; |data_memory|Address[1]                                                       ; out              ;
+; |data_memory|Address[2]                                                       ; |data_memory|Address[2]                                                       ; out              ;
+; |data_memory|Address[3]                                                       ; |data_memory|Address[3]                                                       ; out              ;
+; |data_memory|Address[4]                                                       ; |data_memory|Address[4]                                                       ; out              ;
+; |data_memory|Address[5]                                                       ; |data_memory|Address[5]                                                       ; out              ;
+; |data_memory|Address[6]                                                       ; |data_memory|Address[6]                                                       ; out              ;
+; |data_memory|Read                                                             ; |data_memory|Read                                                             ; out              ;
+; |data_memory|Write                                                            ; |data_memory|Write                                                            ; out              ;
+; |data_memory|Datain[0]                                                        ; |data_memory|Datain[0]                                                        ; out              ;
+; |data_memory|Datain[1]                                                        ; |data_memory|Datain[1]                                                        ; out              ;
+; |data_memory|Datain[2]                                                        ; |data_memory|Datain[2]                                                        ; out              ;
+; |data_memory|Datain[3]                                                        ; |data_memory|Datain[3]                                                        ; out              ;
+; |data_memory|Datain[4]                                                        ; |data_memory|Datain[4]                                                        ; out              ;
+; |data_memory|Datain[5]                                                        ; |data_memory|Datain[5]                                                        ; out              ;
+; |data_memory|Datain[6]                                                        ; |data_memory|Datain[6]                                                        ; out              ;
+; |data_memory|Datain[7]                                                        ; |data_memory|Datain[7]                                                        ; out              ;
+; |data_memory|Clock                                                            ; |data_memory|Clock                                                            ; out              ;
+; |data_memory|Dataout[0]                                                       ; |data_memory|Dataout[0]                                                       ; pin_out          ;
+; |data_memory|Dataout[1]                                                       ; |data_memory|Dataout[1]                                                       ; pin_out          ;
+; |data_memory|Dataout[2]                                                       ; |data_memory|Dataout[2]                                                       ; pin_out          ;
+; |data_memory|Dataout[3]                                                       ; |data_memory|Dataout[3]                                                       ; pin_out          ;
+; |data_memory|Dataout[4]                                                       ; |data_memory|Dataout[4]                                                       ; pin_out          ;
+; |data_memory|Dataout[5]                                                       ; |data_memory|Dataout[5]                                                       ; pin_out          ;
+; |data_memory|Dataout[6]                                                       ; |data_memory|Dataout[6]                                                       ; pin_out          ;
+; |data_memory|Dataout[7]                                                       ; |data_memory|Dataout[7]                                                       ; pin_out          ;
+; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a0 ; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a0 ; portbdataout0    ;
+; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a1 ; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a1 ; portbdataout0    ;
+; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a2 ; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a2 ; portbdataout0    ;
+; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a3 ; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a3 ; portbdataout0    ;
+; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a4 ; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a4 ; portbdataout0    ;
+; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a5 ; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a5 ; portbdataout0    ;
+; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a6 ; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a6 ; portbdataout0    ;
+; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a7 ; |data_memory|altsyncram:mem_rtl_0|altsyncram_8ld1:auto_generated|ram_block1a7 ; portbdataout0    ;
++-------------------------------------------------------------------------------+-------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Jan 25 19:17:58 2023
+Info: Command: quartus_sim --simulation_results_format=VWF data_memory -c data_memory
+Info (324025): Using vector source file "E:/Program Files/FPGA/project/Waveform4.vwf"
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "AC[7]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "AC[6]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "AC[5]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "AC[4]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "AC[3]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "AC[2]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "AC[1]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "AC[0]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Clear" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "I[7]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "I[6]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "I[5]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "I[4]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "I[3]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "I[2]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "I[1]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "I[0]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "LSB" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "MSB" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "S[1]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "S[0]" in design.
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[0]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[1]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[2]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[3]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[4]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[5]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[6]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[7]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[8]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[9]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[10]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[11]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[12]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[13]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[14]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[15]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[16]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[17]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[18]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[19]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[20]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[21]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[22]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[23]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[24]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[25]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[26]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[27]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[28]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[29]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[30]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[31]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[32]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[33]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[34]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[35]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[36]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[37]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[38]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[39]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[40]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[41]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[42]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[43]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[44]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[45]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[46]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[47]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[48]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[49]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[50]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[51]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[52]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[53]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[54]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[55]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[56]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[57]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[58]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[59]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[60]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[61]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[62]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[63]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[64]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[65]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[66]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[67]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[68]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[69]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[70]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[71]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[72]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[73]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[74]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[75]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[76]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[77]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[78]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[79]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[80]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[81]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[82]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[83]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[84]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[85]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[86]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[87]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[88]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[89]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[90]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[91]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[92]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[93]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[94]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[95]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[96]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[97]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[98]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[99]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[100]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[101]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[102]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[103]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[104]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[105]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[106]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[107]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[108]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[109]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[110]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[111]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[112]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[113]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[114]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[115]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[116]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[117]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[118]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[119]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[120]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[121]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[122]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[123]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[124]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[125]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[126]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Address[127]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Read"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Write"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Datain[0]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Datain[1]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Datain[2]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Datain[3]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Datain[4]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Datain[5]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Datain[6]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Datain[7]"
+Warning (328012): Can't find signal in vector source file for input pin "|data_memory|Clock"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is       0.00 %
+Info (328052): Number of transitions in simulation is 0
+Info (324045): Vector file data_memory.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 160 warnings
+    Info: Peak virtual memory: 4440 megabytes
+    Info: Processing ended: Wed Jan 25 19:17:58 2023
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

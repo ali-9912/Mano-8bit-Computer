@@ -1,0 +1,15 @@
+module Mux3to1(A,B,C,S,W);
+input [7:0]A,B,C;
+input [1:0]S;
+output reg[7:0]W;
+
+always @(A or B or C or S)
+begin
+	W = 8'b0;
+	case (S)
+		2'b00 : W = A;
+		2'b01 : W = B;
+		2'b10 : W = C;
+	endcase
+end
+endmodule

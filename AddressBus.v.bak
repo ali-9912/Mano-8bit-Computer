@@ -1,0 +1,30 @@
+module AddressBus(X0,X1,X2,X3,X4,X5,X6,X7,AR,PC,IR,TR,AC,MEM,B);
+ input X0,X1,X2,X3,X4,X5,X6,X7 ;
+ input [9:0] AR ;
+ input [9:0] PC ;
+ input [13:0] IR ;
+ input [9:0] TR ;
+ input [7:0] AC ;
+ input [13:0] MEM ;
+ output wire [13:0] B ;
+ 
+ wire S0,S1,S2,Y0,Y1,Y2,Y3,Y4,Y5,Y6,Y7 ;
+ Encoder8to3 n1(X0,X1,X2,X3,X4,X5,X6,X7,S0,S1,S2) ;
+ Decoder3to8 n2({S2,S1,S0},{Y7,Y6,Y5,Y4,Y3,Y2,Y1,Y0}) ;
+ /*bufif1 m0(B[0],AC[0],Y1) ;
+ bufif1 m1(B[0],DR[0],Y0) ;
+ bufif1 m2(B[1],AC[1],Y1) ;
+ bufif1 m3(B[1],DR[1],Y0) ;
+ bufif1 m4(B[2],AC[2],Y1) ;
+ bufif1 m5(B[2],DR[2],Y0) ;
+ bufif1 m6(B[3],AC[3],Y1) ;
+ bufif1 m7(B[3],DR[3],Y0) ;
+ bufif1 m8(B[4],AC[4],Y1) ;
+ bufif1 m9(B[4],DR[4],Y0) ;
+ bufif1 m10(B[5],AC[5],Y1) ;
+ bufif1 m11(B[5],DR[5],Y0) ;
+ bufif1 m12(B[6],AC[6],Y1) ;
+ bufif1 m13(B[6],DR[6],Y0) ;
+ bufif1 m14(B[7],AC[7],Y1) ;
+ bufif1 m15(B[7],DR[7],Y0) ;*/
+endmodule

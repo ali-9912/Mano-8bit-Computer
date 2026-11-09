@@ -1,0 +1,29 @@
+module Controlunit(Clock,Reset,Opcode,Inst,I,R,E,FGI,FGO,AC,DR,PCload,PCincr,PCclear,ARload,ARincr,ARclear,
+		             DRload,DRincr,ACload,ACincr,ACclear,DARload,IRload,TRload,ALUS2,ALUS1,ALUS0,
+		             DatamemoryRead,DatamemoryWrite,InstructionmemoryRead,InstructionmemoryWrite);
+		               
+  input Clock,Reset,I,R,E,FGI,FGO ;
+  input [2:0] Opcode ;
+  input [9:0] Inst ;
+  input [7:0] DR ;
+  input [7:0] AC ;	
+  output PCload,PCincr,PCclear,ARload,ARincr,ARclear,DRload,DRincr,
+	      ACload,ACincr,ACclear,DARload,IRload,TRload,ALUS2,ALUS1,ALUS0,
+		   DatamemoryRead,DatamemoryWrite,InstructionmemoryRead,InstructionmemoryWrite ;
+		     
+	wire [7:0] T ;
+	wire [7:0] D ;
+	wire [2:0] A ;
+	
+	SequenceCounter tribit(Reset,Clock,A);
+	Decoder3to8 D1(A,T);
+	Decoder3to8 D2(Opcde,D);
+	Controlgate m1(I,R,E,FGI,FGO,D,T,AC,Inst,DR,PCload,PCincr,
+						PCclear,ARload,ARincr,ARclear,DRload,DRincr,
+						ACload,ACincr,ACclear,DARload,IRload,TRload,
+						ALUS2,ALUS1,ALUS0,DatamemoryRead,DatamemoryWrite,
+						InstructionmemoryRead,InstructionmemoryWrite);
+	
+	
+endmodule
+

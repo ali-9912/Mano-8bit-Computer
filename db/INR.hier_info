@@ -1,0 +1,35 @@
+|INR
+I[0] => W[0]~reg0.DATAIN
+I[1] => W[1]~reg0.DATAIN
+I[2] => W[2]~reg0.DATAIN
+I[3] => W[3]~reg0.DATAIN
+I[4] => W[4]~reg0.DATAIN
+I[5] => W[5]~reg0.DATAIN
+I[6] => W[6]~reg0.DATAIN
+I[7] => W[7]~reg0.DATAIN
+Clock => W[0]~reg0.CLK
+Clock => W[1]~reg0.CLK
+Clock => W[2]~reg0.CLK
+Clock => W[3]~reg0.CLK
+Clock => W[4]~reg0.CLK
+Clock => W[5]~reg0.CLK
+Clock => W[6]~reg0.CLK
+Clock => W[7]~reg0.CLK
+LD => W[0]~reg0.ENA
+LD => W[1]~reg0.ENA
+LD => W[2]~reg0.ENA
+LD => W[3]~reg0.ENA
+LD => W[4]~reg0.ENA
+LD => W[5]~reg0.ENA
+LD => W[6]~reg0.ENA
+LD => W[7]~reg0.ENA
+W[0] <= W[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+W[1] <= W[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+W[2] <= W[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+W[3] <= W[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+W[4] <= W[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+W[5] <= W[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+W[6] <= W[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+W[7] <= W[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

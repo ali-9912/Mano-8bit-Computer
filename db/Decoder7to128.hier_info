@@ -1,0 +1,1108 @@
+|Decoder7to128
+D[0] => D[0].IN2
+D[1] => D[1].IN2
+D[2] => D[2].IN2
+D[3] => D[3].IN2
+D[4] => D[4].IN2
+D[5] => D[5].IN2
+D[6] => D[6].IN1
+Q[0] <= Decoder6to64:N1.port2
+Q[1] <= Decoder6to64:N1.port2
+Q[2] <= Decoder6to64:N1.port2
+Q[3] <= Decoder6to64:N1.port2
+Q[4] <= Decoder6to64:N1.port2
+Q[5] <= Decoder6to64:N1.port2
+Q[6] <= Decoder6to64:N1.port2
+Q[7] <= Decoder6to64:N1.port2
+Q[8] <= Decoder6to64:N1.port2
+Q[9] <= Decoder6to64:N1.port2
+Q[10] <= Decoder6to64:N1.port2
+Q[11] <= Decoder6to64:N1.port2
+Q[12] <= Decoder6to64:N1.port2
+Q[13] <= Decoder6to64:N1.port2
+Q[14] <= Decoder6to64:N1.port2
+Q[15] <= Decoder6to64:N1.port2
+Q[16] <= Decoder6to64:N1.port2
+Q[17] <= Decoder6to64:N1.port2
+Q[18] <= Decoder6to64:N1.port2
+Q[19] <= Decoder6to64:N1.port2
+Q[20] <= Decoder6to64:N1.port2
+Q[21] <= Decoder6to64:N1.port2
+Q[22] <= Decoder6to64:N1.port2
+Q[23] <= Decoder6to64:N1.port2
+Q[24] <= Decoder6to64:N1.port2
+Q[25] <= Decoder6to64:N1.port2
+Q[26] <= Decoder6to64:N1.port2
+Q[27] <= Decoder6to64:N1.port2
+Q[28] <= Decoder6to64:N1.port2
+Q[29] <= Decoder6to64:N1.port2
+Q[30] <= Decoder6to64:N1.port2
+Q[31] <= Decoder6to64:N1.port2
+Q[32] <= Decoder6to64:N1.port2
+Q[33] <= Decoder6to64:N1.port2
+Q[34] <= Decoder6to64:N1.port2
+Q[35] <= Decoder6to64:N1.port2
+Q[36] <= Decoder6to64:N1.port2
+Q[37] <= Decoder6to64:N1.port2
+Q[38] <= Decoder6to64:N1.port2
+Q[39] <= Decoder6to64:N1.port2
+Q[40] <= Decoder6to64:N1.port2
+Q[41] <= Decoder6to64:N1.port2
+Q[42] <= Decoder6to64:N1.port2
+Q[43] <= Decoder6to64:N1.port2
+Q[44] <= Decoder6to64:N1.port2
+Q[45] <= Decoder6to64:N1.port2
+Q[46] <= Decoder6to64:N1.port2
+Q[47] <= Decoder6to64:N1.port2
+Q[48] <= Decoder6to64:N1.port2
+Q[49] <= Decoder6to64:N1.port2
+Q[50] <= Decoder6to64:N1.port2
+Q[51] <= Decoder6to64:N1.port2
+Q[52] <= Decoder6to64:N1.port2
+Q[53] <= Decoder6to64:N1.port2
+Q[54] <= Decoder6to64:N1.port2
+Q[55] <= Decoder6to64:N1.port2
+Q[56] <= Decoder6to64:N1.port2
+Q[57] <= Decoder6to64:N1.port2
+Q[58] <= Decoder6to64:N1.port2
+Q[59] <= Decoder6to64:N1.port2
+Q[60] <= Decoder6to64:N1.port2
+Q[61] <= Decoder6to64:N1.port2
+Q[62] <= Decoder6to64:N1.port2
+Q[63] <= Decoder6to64:N1.port2
+Q[64] <= Decoder6to64:N2.port2
+Q[65] <= Decoder6to64:N2.port2
+Q[66] <= Decoder6to64:N2.port2
+Q[67] <= Decoder6to64:N2.port2
+Q[68] <= Decoder6to64:N2.port2
+Q[69] <= Decoder6to64:N2.port2
+Q[70] <= Decoder6to64:N2.port2
+Q[71] <= Decoder6to64:N2.port2
+Q[72] <= Decoder6to64:N2.port2
+Q[73] <= Decoder6to64:N2.port2
+Q[74] <= Decoder6to64:N2.port2
+Q[75] <= Decoder6to64:N2.port2
+Q[76] <= Decoder6to64:N2.port2
+Q[77] <= Decoder6to64:N2.port2
+Q[78] <= Decoder6to64:N2.port2
+Q[79] <= Decoder6to64:N2.port2
+Q[80] <= Decoder6to64:N2.port2
+Q[81] <= Decoder6to64:N2.port2
+Q[82] <= Decoder6to64:N2.port2
+Q[83] <= Decoder6to64:N2.port2
+Q[84] <= Decoder6to64:N2.port2
+Q[85] <= Decoder6to64:N2.port2
+Q[86] <= Decoder6to64:N2.port2
+Q[87] <= Decoder6to64:N2.port2
+Q[88] <= Decoder6to64:N2.port2
+Q[89] <= Decoder6to64:N2.port2
+Q[90] <= Decoder6to64:N2.port2
+Q[91] <= Decoder6to64:N2.port2
+Q[92] <= Decoder6to64:N2.port2
+Q[93] <= Decoder6to64:N2.port2
+Q[94] <= Decoder6to64:N2.port2
+Q[95] <= Decoder6to64:N2.port2
+Q[96] <= Decoder6to64:N2.port2
+Q[97] <= Decoder6to64:N2.port2
+Q[98] <= Decoder6to64:N2.port2
+Q[99] <= Decoder6to64:N2.port2
+Q[100] <= Decoder6to64:N2.port2
+Q[101] <= Decoder6to64:N2.port2
+Q[102] <= Decoder6to64:N2.port2
+Q[103] <= Decoder6to64:N2.port2
+Q[104] <= Decoder6to64:N2.port2
+Q[105] <= Decoder6to64:N2.port2
+Q[106] <= Decoder6to64:N2.port2
+Q[107] <= Decoder6to64:N2.port2
+Q[108] <= Decoder6to64:N2.port2
+Q[109] <= Decoder6to64:N2.port2
+Q[110] <= Decoder6to64:N2.port2
+Q[111] <= Decoder6to64:N2.port2
+Q[112] <= Decoder6to64:N2.port2
+Q[113] <= Decoder6to64:N2.port2
+Q[114] <= Decoder6to64:N2.port2
+Q[115] <= Decoder6to64:N2.port2
+Q[116] <= Decoder6to64:N2.port2
+Q[117] <= Decoder6to64:N2.port2
+Q[118] <= Decoder6to64:N2.port2
+Q[119] <= Decoder6to64:N2.port2
+Q[120] <= Decoder6to64:N2.port2
+Q[121] <= Decoder6to64:N2.port2
+Q[122] <= Decoder6to64:N2.port2
+Q[123] <= Decoder6to64:N2.port2
+Q[124] <= Decoder6to64:N2.port2
+Q[125] <= Decoder6to64:N2.port2
+Q[126] <= Decoder6to64:N2.port2
+Q[127] <= Decoder6to64:N2.port2
+
+
+|Decoder7to128|Decoder6to64:N1
+En => En.IN1
+D[0] => D[0].IN4
+D[1] => D[1].IN4
+D[2] => D[2].IN4
+D[3] => D[3].IN4
+D[4] => D[4].IN1
+D[5] => D[5].IN1
+Q[0] <= Decoder4to16:N2.port2
+Q[1] <= Decoder4to16:N2.port2
+Q[2] <= Decoder4to16:N2.port2
+Q[3] <= Decoder4to16:N2.port2
+Q[4] <= Decoder4to16:N2.port2
+Q[5] <= Decoder4to16:N2.port2
+Q[6] <= Decoder4to16:N2.port2
+Q[7] <= Decoder4to16:N2.port2
+Q[8] <= Decoder4to16:N2.port2
+Q[9] <= Decoder4to16:N2.port2
+Q[10] <= Decoder4to16:N2.port2
+Q[11] <= Decoder4to16:N2.port2
+Q[12] <= Decoder4to16:N2.port2
+Q[13] <= Decoder4to16:N2.port2
+Q[14] <= Decoder4to16:N2.port2
+Q[15] <= Decoder4to16:N2.port2
+Q[16] <= Decoder4to16:N3.port2
+Q[17] <= Decoder4to16:N3.port2
+Q[18] <= Decoder4to16:N3.port2
+Q[19] <= Decoder4to16:N3.port2
+Q[20] <= Decoder4to16:N3.port2
+Q[21] <= Decoder4to16:N3.port2
+Q[22] <= Decoder4to16:N3.port2
+Q[23] <= Decoder4to16:N3.port2
+Q[24] <= Decoder4to16:N3.port2
+Q[25] <= Decoder4to16:N3.port2
+Q[26] <= Decoder4to16:N3.port2
+Q[27] <= Decoder4to16:N3.port2
+Q[28] <= Decoder4to16:N3.port2
+Q[29] <= Decoder4to16:N3.port2
+Q[30] <= Decoder4to16:N3.port2
+Q[31] <= Decoder4to16:N3.port2
+Q[32] <= Decoder4to16:N4.port2
+Q[33] <= Decoder4to16:N4.port2
+Q[34] <= Decoder4to16:N4.port2
+Q[35] <= Decoder4to16:N4.port2
+Q[36] <= Decoder4to16:N4.port2
+Q[37] <= Decoder4to16:N4.port2
+Q[38] <= Decoder4to16:N4.port2
+Q[39] <= Decoder4to16:N4.port2
+Q[40] <= Decoder4to16:N4.port2
+Q[41] <= Decoder4to16:N4.port2
+Q[42] <= Decoder4to16:N4.port2
+Q[43] <= Decoder4to16:N4.port2
+Q[44] <= Decoder4to16:N4.port2
+Q[45] <= Decoder4to16:N4.port2
+Q[46] <= Decoder4to16:N4.port2
+Q[47] <= Decoder4to16:N4.port2
+Q[48] <= Decoder4to16:N5.port2
+Q[49] <= Decoder4to16:N5.port2
+Q[50] <= Decoder4to16:N5.port2
+Q[51] <= Decoder4to16:N5.port2
+Q[52] <= Decoder4to16:N5.port2
+Q[53] <= Decoder4to16:N5.port2
+Q[54] <= Decoder4to16:N5.port2
+Q[55] <= Decoder4to16:N5.port2
+Q[56] <= Decoder4to16:N5.port2
+Q[57] <= Decoder4to16:N5.port2
+Q[58] <= Decoder4to16:N5.port2
+Q[59] <= Decoder4to16:N5.port2
+Q[60] <= Decoder4to16:N5.port2
+Q[61] <= Decoder4to16:N5.port2
+Q[62] <= Decoder4to16:N5.port2
+Q[63] <= Decoder4to16:N5.port2
+
+
+|Decoder7to128|Decoder6to64:N1|Decoder2to4:N1
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N1|Decoder4to16:N2
+En => En.IN1
+I[0] => I[0].IN4
+I[1] => I[1].IN4
+I[2] => I[2].IN1
+I[3] => I[3].IN1
+Q[0] <= Decoder2to4:N2.port2
+Q[1] <= Decoder2to4:N2.port2
+Q[2] <= Decoder2to4:N2.port2
+Q[3] <= Decoder2to4:N2.port2
+Q[4] <= Decoder2to4:N3.port2
+Q[5] <= Decoder2to4:N3.port2
+Q[6] <= Decoder2to4:N3.port2
+Q[7] <= Decoder2to4:N3.port2
+Q[8] <= Decoder2to4:N4.port2
+Q[9] <= Decoder2to4:N4.port2
+Q[10] <= Decoder2to4:N4.port2
+Q[11] <= Decoder2to4:N4.port2
+Q[12] <= Decoder2to4:N5.port2
+Q[13] <= Decoder2to4:N5.port2
+Q[14] <= Decoder2to4:N5.port2
+Q[15] <= Decoder2to4:N5.port2
+
+
+|Decoder7to128|Decoder6to64:N1|Decoder4to16:N2|Decoder2to4:N1
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N1|Decoder4to16:N2|Decoder2to4:N2
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N1|Decoder4to16:N2|Decoder2to4:N3
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N1|Decoder4to16:N2|Decoder2to4:N4
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N1|Decoder4to16:N2|Decoder2to4:N5
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N1|Decoder4to16:N3
+En => En.IN1
+I[0] => I[0].IN4
+I[1] => I[1].IN4
+I[2] => I[2].IN1
+I[3] => I[3].IN1
+Q[0] <= Decoder2to4:N2.port2
+Q[1] <= Decoder2to4:N2.port2
+Q[2] <= Decoder2to4:N2.port2
+Q[3] <= Decoder2to4:N2.port2
+Q[4] <= Decoder2to4:N3.port2
+Q[5] <= Decoder2to4:N3.port2
+Q[6] <= Decoder2to4:N3.port2
+Q[7] <= Decoder2to4:N3.port2
+Q[8] <= Decoder2to4:N4.port2
+Q[9] <= Decoder2to4:N4.port2
+Q[10] <= Decoder2to4:N4.port2
+Q[11] <= Decoder2to4:N4.port2
+Q[12] <= Decoder2to4:N5.port2
+Q[13] <= Decoder2to4:N5.port2
+Q[14] <= Decoder2to4:N5.port2
+Q[15] <= Decoder2to4:N5.port2
+
+
+|Decoder7to128|Decoder6to64:N1|Decoder4to16:N3|Decoder2to4:N1
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N1|Decoder4to16:N3|Decoder2to4:N2
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N1|Decoder4to16:N3|Decoder2to4:N3
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N1|Decoder4to16:N3|Decoder2to4:N4
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N1|Decoder4to16:N3|Decoder2to4:N5
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N1|Decoder4to16:N4
+En => En.IN1
+I[0] => I[0].IN4
+I[1] => I[1].IN4
+I[2] => I[2].IN1
+I[3] => I[3].IN1
+Q[0] <= Decoder2to4:N2.port2
+Q[1] <= Decoder2to4:N2.port2
+Q[2] <= Decoder2to4:N2.port2
+Q[3] <= Decoder2to4:N2.port2
+Q[4] <= Decoder2to4:N3.port2
+Q[5] <= Decoder2to4:N3.port2
+Q[6] <= Decoder2to4:N3.port2
+Q[7] <= Decoder2to4:N3.port2
+Q[8] <= Decoder2to4:N4.port2
+Q[9] <= Decoder2to4:N4.port2
+Q[10] <= Decoder2to4:N4.port2
+Q[11] <= Decoder2to4:N4.port2
+Q[12] <= Decoder2to4:N5.port2
+Q[13] <= Decoder2to4:N5.port2
+Q[14] <= Decoder2to4:N5.port2
+Q[15] <= Decoder2to4:N5.port2
+
+
+|Decoder7to128|Decoder6to64:N1|Decoder4to16:N4|Decoder2to4:N1
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N1|Decoder4to16:N4|Decoder2to4:N2
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N1|Decoder4to16:N4|Decoder2to4:N3
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N1|Decoder4to16:N4|Decoder2to4:N4
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N1|Decoder4to16:N4|Decoder2to4:N5
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N1|Decoder4to16:N5
+En => En.IN1
+I[0] => I[0].IN4
+I[1] => I[1].IN4
+I[2] => I[2].IN1
+I[3] => I[3].IN1
+Q[0] <= Decoder2to4:N2.port2
+Q[1] <= Decoder2to4:N2.port2
+Q[2] <= Decoder2to4:N2.port2
+Q[3] <= Decoder2to4:N2.port2
+Q[4] <= Decoder2to4:N3.port2
+Q[5] <= Decoder2to4:N3.port2
+Q[6] <= Decoder2to4:N3.port2
+Q[7] <= Decoder2to4:N3.port2
+Q[8] <= Decoder2to4:N4.port2
+Q[9] <= Decoder2to4:N4.port2
+Q[10] <= Decoder2to4:N4.port2
+Q[11] <= Decoder2to4:N4.port2
+Q[12] <= Decoder2to4:N5.port2
+Q[13] <= Decoder2to4:N5.port2
+Q[14] <= Decoder2to4:N5.port2
+Q[15] <= Decoder2to4:N5.port2
+
+
+|Decoder7to128|Decoder6to64:N1|Decoder4to16:N5|Decoder2to4:N1
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N1|Decoder4to16:N5|Decoder2to4:N2
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N1|Decoder4to16:N5|Decoder2to4:N3
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N1|Decoder4to16:N5|Decoder2to4:N4
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N1|Decoder4to16:N5|Decoder2to4:N5
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N2
+En => En.IN1
+D[0] => D[0].IN4
+D[1] => D[1].IN4
+D[2] => D[2].IN4
+D[3] => D[3].IN4
+D[4] => D[4].IN1
+D[5] => D[5].IN1
+Q[0] <= Decoder4to16:N2.port2
+Q[1] <= Decoder4to16:N2.port2
+Q[2] <= Decoder4to16:N2.port2
+Q[3] <= Decoder4to16:N2.port2
+Q[4] <= Decoder4to16:N2.port2
+Q[5] <= Decoder4to16:N2.port2
+Q[6] <= Decoder4to16:N2.port2
+Q[7] <= Decoder4to16:N2.port2
+Q[8] <= Decoder4to16:N2.port2
+Q[9] <= Decoder4to16:N2.port2
+Q[10] <= Decoder4to16:N2.port2
+Q[11] <= Decoder4to16:N2.port2
+Q[12] <= Decoder4to16:N2.port2
+Q[13] <= Decoder4to16:N2.port2
+Q[14] <= Decoder4to16:N2.port2
+Q[15] <= Decoder4to16:N2.port2
+Q[16] <= Decoder4to16:N3.port2
+Q[17] <= Decoder4to16:N3.port2
+Q[18] <= Decoder4to16:N3.port2
+Q[19] <= Decoder4to16:N3.port2
+Q[20] <= Decoder4to16:N3.port2
+Q[21] <= Decoder4to16:N3.port2
+Q[22] <= Decoder4to16:N3.port2
+Q[23] <= Decoder4to16:N3.port2
+Q[24] <= Decoder4to16:N3.port2
+Q[25] <= Decoder4to16:N3.port2
+Q[26] <= Decoder4to16:N3.port2
+Q[27] <= Decoder4to16:N3.port2
+Q[28] <= Decoder4to16:N3.port2
+Q[29] <= Decoder4to16:N3.port2
+Q[30] <= Decoder4to16:N3.port2
+Q[31] <= Decoder4to16:N3.port2
+Q[32] <= Decoder4to16:N4.port2
+Q[33] <= Decoder4to16:N4.port2
+Q[34] <= Decoder4to16:N4.port2
+Q[35] <= Decoder4to16:N4.port2
+Q[36] <= Decoder4to16:N4.port2
+Q[37] <= Decoder4to16:N4.port2
+Q[38] <= Decoder4to16:N4.port2
+Q[39] <= Decoder4to16:N4.port2
+Q[40] <= Decoder4to16:N4.port2
+Q[41] <= Decoder4to16:N4.port2
+Q[42] <= Decoder4to16:N4.port2
+Q[43] <= Decoder4to16:N4.port2
+Q[44] <= Decoder4to16:N4.port2
+Q[45] <= Decoder4to16:N4.port2
+Q[46] <= Decoder4to16:N4.port2
+Q[47] <= Decoder4to16:N4.port2
+Q[48] <= Decoder4to16:N5.port2
+Q[49] <= Decoder4to16:N5.port2
+Q[50] <= Decoder4to16:N5.port2
+Q[51] <= Decoder4to16:N5.port2
+Q[52] <= Decoder4to16:N5.port2
+Q[53] <= Decoder4to16:N5.port2
+Q[54] <= Decoder4to16:N5.port2
+Q[55] <= Decoder4to16:N5.port2
+Q[56] <= Decoder4to16:N5.port2
+Q[57] <= Decoder4to16:N5.port2
+Q[58] <= Decoder4to16:N5.port2
+Q[59] <= Decoder4to16:N5.port2
+Q[60] <= Decoder4to16:N5.port2
+Q[61] <= Decoder4to16:N5.port2
+Q[62] <= Decoder4to16:N5.port2
+Q[63] <= Decoder4to16:N5.port2
+
+
+|Decoder7to128|Decoder6to64:N2|Decoder2to4:N1
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N2|Decoder4to16:N2
+En => En.IN1
+I[0] => I[0].IN4
+I[1] => I[1].IN4
+I[2] => I[2].IN1
+I[3] => I[3].IN1
+Q[0] <= Decoder2to4:N2.port2
+Q[1] <= Decoder2to4:N2.port2
+Q[2] <= Decoder2to4:N2.port2
+Q[3] <= Decoder2to4:N2.port2
+Q[4] <= Decoder2to4:N3.port2
+Q[5] <= Decoder2to4:N3.port2
+Q[6] <= Decoder2to4:N3.port2
+Q[7] <= Decoder2to4:N3.port2
+Q[8] <= Decoder2to4:N4.port2
+Q[9] <= Decoder2to4:N4.port2
+Q[10] <= Decoder2to4:N4.port2
+Q[11] <= Decoder2to4:N4.port2
+Q[12] <= Decoder2to4:N5.port2
+Q[13] <= Decoder2to4:N5.port2
+Q[14] <= Decoder2to4:N5.port2
+Q[15] <= Decoder2to4:N5.port2
+
+
+|Decoder7to128|Decoder6to64:N2|Decoder4to16:N2|Decoder2to4:N1
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N2|Decoder4to16:N2|Decoder2to4:N2
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N2|Decoder4to16:N2|Decoder2to4:N3
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N2|Decoder4to16:N2|Decoder2to4:N4
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N2|Decoder4to16:N2|Decoder2to4:N5
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N2|Decoder4to16:N3
+En => En.IN1
+I[0] => I[0].IN4
+I[1] => I[1].IN4
+I[2] => I[2].IN1
+I[3] => I[3].IN1
+Q[0] <= Decoder2to4:N2.port2
+Q[1] <= Decoder2to4:N2.port2
+Q[2] <= Decoder2to4:N2.port2
+Q[3] <= Decoder2to4:N2.port2
+Q[4] <= Decoder2to4:N3.port2
+Q[5] <= Decoder2to4:N3.port2
+Q[6] <= Decoder2to4:N3.port2
+Q[7] <= Decoder2to4:N3.port2
+Q[8] <= Decoder2to4:N4.port2
+Q[9] <= Decoder2to4:N4.port2
+Q[10] <= Decoder2to4:N4.port2
+Q[11] <= Decoder2to4:N4.port2
+Q[12] <= Decoder2to4:N5.port2
+Q[13] <= Decoder2to4:N5.port2
+Q[14] <= Decoder2to4:N5.port2
+Q[15] <= Decoder2to4:N5.port2
+
+
+|Decoder7to128|Decoder6to64:N2|Decoder4to16:N3|Decoder2to4:N1
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N2|Decoder4to16:N3|Decoder2to4:N2
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N2|Decoder4to16:N3|Decoder2to4:N3
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N2|Decoder4to16:N3|Decoder2to4:N4
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N2|Decoder4to16:N3|Decoder2to4:N5
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N2|Decoder4to16:N4
+En => En.IN1
+I[0] => I[0].IN4
+I[1] => I[1].IN4
+I[2] => I[2].IN1
+I[3] => I[3].IN1
+Q[0] <= Decoder2to4:N2.port2
+Q[1] <= Decoder2to4:N2.port2
+Q[2] <= Decoder2to4:N2.port2
+Q[3] <= Decoder2to4:N2.port2
+Q[4] <= Decoder2to4:N3.port2
+Q[5] <= Decoder2to4:N3.port2
+Q[6] <= Decoder2to4:N3.port2
+Q[7] <= Decoder2to4:N3.port2
+Q[8] <= Decoder2to4:N4.port2
+Q[9] <= Decoder2to4:N4.port2
+Q[10] <= Decoder2to4:N4.port2
+Q[11] <= Decoder2to4:N4.port2
+Q[12] <= Decoder2to4:N5.port2
+Q[13] <= Decoder2to4:N5.port2
+Q[14] <= Decoder2to4:N5.port2
+Q[15] <= Decoder2to4:N5.port2
+
+
+|Decoder7to128|Decoder6to64:N2|Decoder4to16:N4|Decoder2to4:N1
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N2|Decoder4to16:N4|Decoder2to4:N2
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N2|Decoder4to16:N4|Decoder2to4:N3
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N2|Decoder4to16:N4|Decoder2to4:N4
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N2|Decoder4to16:N4|Decoder2to4:N5
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N2|Decoder4to16:N5
+En => En.IN1
+I[0] => I[0].IN4
+I[1] => I[1].IN4
+I[2] => I[2].IN1
+I[3] => I[3].IN1
+Q[0] <= Decoder2to4:N2.port2
+Q[1] <= Decoder2to4:N2.port2
+Q[2] <= Decoder2to4:N2.port2
+Q[3] <= Decoder2to4:N2.port2
+Q[4] <= Decoder2to4:N3.port2
+Q[5] <= Decoder2to4:N3.port2
+Q[6] <= Decoder2to4:N3.port2
+Q[7] <= Decoder2to4:N3.port2
+Q[8] <= Decoder2to4:N4.port2
+Q[9] <= Decoder2to4:N4.port2
+Q[10] <= Decoder2to4:N4.port2
+Q[11] <= Decoder2to4:N4.port2
+Q[12] <= Decoder2to4:N5.port2
+Q[13] <= Decoder2to4:N5.port2
+Q[14] <= Decoder2to4:N5.port2
+Q[15] <= Decoder2to4:N5.port2
+
+
+|Decoder7to128|Decoder6to64:N2|Decoder4to16:N5|Decoder2to4:N1
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N2|Decoder4to16:N5|Decoder2to4:N2
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N2|Decoder4to16:N5|Decoder2to4:N3
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N2|Decoder4to16:N5|Decoder2to4:N4
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder7to128|Decoder6to64:N2|Decoder4to16:N5|Decoder2to4:N5
+En => Q.IN0
+En => Q.IN0
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[0] => Q.IN1
+I[1] => Q.IN1
+I[1] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+

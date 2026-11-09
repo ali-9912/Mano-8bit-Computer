@@ -1,0 +1,12 @@
+//1 bit fulladder
+module fulladder(Sum ,C_out,A , B , C_in );
+	input A,B,C_in;
+	output Sum,C_out;
+	wire s1,s2,c1;
+	
+	xor (s1,A,B);
+	xor (Sum,s1,C_in);
+	and (c1,A,B);
+	and (s2,s1,C_in);
+	or (C_out,s2,c1);
+endmodule

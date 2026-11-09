@@ -1,0 +1,360 @@
+|ControlUnit
+Clock => Clock.IN1
+Reset => Reset.IN1
+Inst[0] => Inst[0].IN1
+Inst[1] => Inst[1].IN1
+Inst[2] => Inst[2].IN1
+Inst[3] => Inst[3].IN1
+Inst[4] => Inst[4].IN1
+Inst[5] => Inst[5].IN1
+Inst[6] => Inst[6].IN1
+Inst[7] => Inst[7].IN1
+Inst[8] => Inst[8].IN1
+Inst[9] => Inst[9].IN1
+Inst[10] => Inst[10].IN1
+Inst[11] => Inst[11].IN1
+Inst[12] => Inst[12].IN1
+Inst[13] => Inst[13].IN1
+I => I.IN1
+R => R.IN1
+E => E.IN1
+FGI => FGI.IN1
+FGO => FGO.IN1
+AC[0] => AC[0].IN1
+AC[1] => AC[1].IN1
+AC[2] => AC[2].IN1
+AC[3] => AC[3].IN1
+AC[4] => AC[4].IN1
+AC[5] => AC[5].IN1
+AC[6] => AC[6].IN1
+AC[7] => AC[7].IN1
+DR[0] => DR[0].IN1
+DR[1] => DR[1].IN1
+DR[2] => DR[2].IN1
+DR[3] => DR[3].IN1
+DR[4] => DR[4].IN1
+DR[5] => DR[5].IN1
+DR[6] => DR[6].IN1
+DR[7] => DR[7].IN1
+Opcode[0] => Opcode[0].IN1
+Opcode[1] => Opcode[1].IN1
+Opcode[2] => Opcode[2].IN1
+AddressBusPin[0] <= Controlgate:m1.port10
+AddressBusPin[1] <= Controlgate:m1.port10
+AddressBusPin[2] <= Controlgate:m1.port10
+AddressBusPin[3] <= Controlgate:m1.port10
+DataBusPin[0] <= Controlgate:m1.port11
+DataBusPin[1] <= Controlgate:m1.port11
+PCload <= Controlgate:m1.port12
+PCincr <= Controlgate:m1.port13
+PCclear <= Controlgate:m1.port14
+ARload <= Controlgate:m1.port15
+ARincr <= Controlgate:m1.port16
+ARclear <= Controlgate:m1.port17
+DRload <= Controlgate:m1.port18
+DRincr <= Controlgate:m1.port19
+ACload <= Controlgate:m1.port20
+ACincr <= Controlgate:m1.port21
+ACclear <= Controlgate:m1.port22
+DARload <= Controlgate:m1.port23
+IRload <= Controlgate:m1.port24
+TRload <= Controlgate:m1.port25
+ALUS2 <= Controlgate:m1.port26
+ALUS1 <= Controlgate:m1.port27
+ALUS0 <= Controlgate:m1.port28
+DatamemoryRead <= Controlgate:m1.port29
+DatamemoryWrite <= Controlgate:m1.port30
+InstructionmemoryRead <= Controlgate:m1.port31
+InstructionmemoryWrite <= Controlgate:m1.port32
+Select <= Controlgate:m1.port33
+
+
+|ControlUnit|SequenceCounter:tribit
+Reset => Reset.IN3
+Clock => Clock.IN3
+Q[0] <= T_FF:tff0.port0
+Q[1] <= T_FF:tff1.port0
+Q[2] <= T_FF:tff2.port0
+
+
+|ControlUnit|SequenceCounter:tribit|T_FF:tff0
+Q <= D_FF:dff0.port0
+T => comb.IN1
+clk => clk.IN1
+reset => reset.IN1
+
+
+|ControlUnit|SequenceCounter:tribit|T_FF:tff0|D_FF:dff0
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q_bar <= Q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => Q~reg0.DATAIN
+D => Q_bar~reg0.DATAIN
+clk => Q_bar~reg0.CLK
+clk => Q~reg0.CLK
+reset => Q_bar~reg0.PRESET
+reset => Q~reg0.ACLR
+
+
+|ControlUnit|SequenceCounter:tribit|T_FF:tff1
+Q <= D_FF:dff0.port0
+T => comb.IN1
+clk => clk.IN1
+reset => reset.IN1
+
+
+|ControlUnit|SequenceCounter:tribit|T_FF:tff1|D_FF:dff0
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q_bar <= Q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => Q~reg0.DATAIN
+D => Q_bar~reg0.DATAIN
+clk => Q_bar~reg0.CLK
+clk => Q~reg0.CLK
+reset => Q_bar~reg0.PRESET
+reset => Q~reg0.ACLR
+
+
+|ControlUnit|SequenceCounter:tribit|T_FF:tff2
+Q <= D_FF:dff0.port0
+T => comb.IN1
+clk => clk.IN1
+reset => reset.IN1
+
+
+|ControlUnit|SequenceCounter:tribit|T_FF:tff2|D_FF:dff0
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q_bar <= Q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => Q~reg0.DATAIN
+D => Q_bar~reg0.DATAIN
+clk => Q_bar~reg0.CLK
+clk => Q~reg0.CLK
+reset => Q_bar~reg0.PRESET
+reset => Q~reg0.ACLR
+
+
+|ControlUnit|Decoder3to8:D1
+I[0] => m1.IN0
+I[0] => m3.IN0
+I[0] => m5.IN0
+I[0] => m7.IN0
+I[0] => m0.IN0
+I[0] => m2.IN0
+I[0] => m4.IN0
+I[0] => m6.IN0
+I[1] => m2.IN1
+I[1] => m3.IN1
+I[1] => m6.IN1
+I[1] => m7.IN1
+I[1] => m0.IN1
+I[1] => m1.IN1
+I[1] => m4.IN1
+I[1] => m5.IN1
+I[2] => m4.IN2
+I[2] => m5.IN2
+I[2] => m6.IN2
+I[2] => m7.IN2
+I[2] => m0.IN2
+I[2] => m1.IN2
+I[2] => m2.IN2
+I[2] => m3.IN2
+T[0] <= m0.DB_MAX_OUTPUT_PORT_TYPE
+T[1] <= m1.DB_MAX_OUTPUT_PORT_TYPE
+T[2] <= m2.DB_MAX_OUTPUT_PORT_TYPE
+T[3] <= m3.DB_MAX_OUTPUT_PORT_TYPE
+T[4] <= m4.DB_MAX_OUTPUT_PORT_TYPE
+T[5] <= m5.DB_MAX_OUTPUT_PORT_TYPE
+T[6] <= m6.DB_MAX_OUTPUT_PORT_TYPE
+T[7] <= m7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ControlUnit|Decoder3to8:D2
+I[0] => m1.IN0
+I[0] => m3.IN0
+I[0] => m5.IN0
+I[0] => m7.IN0
+I[0] => m0.IN0
+I[0] => m2.IN0
+I[0] => m4.IN0
+I[0] => m6.IN0
+I[1] => m2.IN1
+I[1] => m3.IN1
+I[1] => m6.IN1
+I[1] => m7.IN1
+I[1] => m0.IN1
+I[1] => m1.IN1
+I[1] => m4.IN1
+I[1] => m5.IN1
+I[2] => m4.IN2
+I[2] => m5.IN2
+I[2] => m6.IN2
+I[2] => m7.IN2
+I[2] => m0.IN2
+I[2] => m1.IN2
+I[2] => m2.IN2
+I[2] => m3.IN2
+T[0] <= m0.DB_MAX_OUTPUT_PORT_TYPE
+T[1] <= m1.DB_MAX_OUTPUT_PORT_TYPE
+T[2] <= m2.DB_MAX_OUTPUT_PORT_TYPE
+T[3] <= m3.DB_MAX_OUTPUT_PORT_TYPE
+T[4] <= m4.DB_MAX_OUTPUT_PORT_TYPE
+T[5] <= m5.DB_MAX_OUTPUT_PORT_TYPE
+T[6] <= m6.DB_MAX_OUTPUT_PORT_TYPE
+T[7] <= m7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ControlUnit|Controlgate:m1
+I => S3.IN0
+I => S2.IN0
+R => S1.IN0
+R => TRload.IN0
+R => InstructionmemoryWrite.IN0
+R => AddressBusPin.IN0
+R => AddressBusPin.IN0
+R => AddressBusPin.IN0
+R => AddressBusPin.IN0
+R => ARload.IN0
+R => IRload.IN0
+R => InstructionmemoryRead.IN0
+E => PCincr.IN1
+FGI => PCincr.IN1
+FGO => PCincr.IN1
+D[0] => DRload.IN0
+D[0] => ACload.IN0
+D[0] => n.IN0
+D[1] => DRload.IN0
+D[1] => ACload.IN0
+D[1] => n.IN0
+D[2] => DRload.IN0
+D[2] => ACload.IN0
+D[2] => n.IN0
+D[3] => DataBusPin.IN0
+D[4] => AddressBusPin.IN0
+D[5] => AddressBusPin.IN0
+D[6] => PCincr.IN1
+D[6] => DRload.IN0
+D[6] => DRincr.IN0
+D[6] => DataBusPin.IN0
+D[7] => S2.IN1
+D[7] => S3.IN1
+T[0] => TRload.IN1
+T[0] => AddressBusPin.IN1
+T[0] => AddressBusPin.IN1
+T[1] => S1.IN1
+T[1] => IRload.IN1
+T[1] => InstructionmemoryRead.IN1
+T[1] => InstructionmemoryWrite.IN1
+T[1] => AddressBusPin.IN1
+T[1] => AddressBusPin.IN1
+T[2] => ARload.IN1
+T[3] => S2.IN2
+T[3] => S3.IN2
+T[4] => DRload.IN1
+T[4] => DRload.IN1
+T[4] => DRload.IN1
+T[4] => DRload.IN1
+T[4] => AddressBusPin.IN1
+T[4] => AddressBusPin.IN1
+T[4] => DataBusPin.IN1
+T[5] => DRincr.IN1
+T[5] => ACload.IN1
+T[5] => ACload.IN1
+T[5] => ACload.IN1
+T[5] => n.IN1
+T[5] => n.IN1
+T[5] => n.IN1
+T[6] => PCincr.IN1
+T[6] => DataBusPin.IN1
+AC[0] => S8.IN0
+AC[1] => S8.IN1
+AC[2] => S8.IN2
+AC[3] => S9.IN0
+AC[4] => S9.IN1
+AC[5] => S9.IN2
+AC[6] => comb.IN0
+AC[7] => comb.IN1
+AC[7] => PCincr.IN1
+AC[7] => PCincr.IN1
+B[0] => ~NO_FANOUT~
+B[1] => PCincr.IN1
+B[2] => PCincr.IN1
+B[3] => PCincr.IN1
+B[4] => PCincr.IN1
+B[5] => ACincr.IN1
+B[6] => PCincr.IN1
+B[6] => ACload.IN1
+B[6] => n.IN1
+B[7] => PCincr.IN1
+B[7] => ACload.IN1
+B[7] => n.IN1
+B[8] => ACload.IN1
+B[8] => DataBusPin.IN1
+B[9] => ACclear.IN1
+B[9] => Sel.IN1
+B[9] => n.IN1
+B[9] => n.IN1
+DR[0] => S4.IN0
+DR[1] => S4.IN1
+DR[2] => S4.IN2
+DR[3] => S5.IN0
+DR[4] => S5.IN1
+DR[5] => S5.IN2
+DR[6] => comb.IN0
+DR[7] => comb.IN1
+AddressBusPin[0] <= AddressBusPin.DB_MAX_OUTPUT_PORT_TYPE
+AddressBusPin[1] <= AddressBusPin.DB_MAX_OUTPUT_PORT_TYPE
+AddressBusPin[2] <= AddressBusPin.DB_MAX_OUTPUT_PORT_TYPE
+AddressBusPin[3] <= AddressBusPin.DB_MAX_OUTPUT_PORT_TYPE
+DataBusPin[0] <= DataBusPin.DB_MAX_OUTPUT_PORT_TYPE
+DataBusPin[1] <= DataBusPin.DB_MAX_OUTPUT_PORT_TYPE
+PCload <= AddressBusPin.DB_MAX_OUTPUT_PORT_TYPE
+PCincr <= PCincr.DB_MAX_OUTPUT_PORT_TYPE
+PCclear <= S1.DB_MAX_OUTPUT_PORT_TYPE
+ARload <= ARload.DB_MAX_OUTPUT_PORT_TYPE
+ARincr <= AddressBusPin.DB_MAX_OUTPUT_PORT_TYPE
+ARclear <= AddressBusPin.DB_MAX_OUTPUT_PORT_TYPE
+DRload <= DRload.DB_MAX_OUTPUT_PORT_TYPE
+DRincr <= DRincr.DB_MAX_OUTPUT_PORT_TYPE
+ACload <= ACload.DB_MAX_OUTPUT_PORT_TYPE
+ACincr <= ACincr.DB_MAX_OUTPUT_PORT_TYPE
+ACclear <= ACclear.DB_MAX_OUTPUT_PORT_TYPE
+DARload <= ARload.DB_MAX_OUTPUT_PORT_TYPE
+IRload <= IRload.DB_MAX_OUTPUT_PORT_TYPE
+TRload <= TRload.DB_MAX_OUTPUT_PORT_TYPE
+ALUS2 <= Encoder8to3:j0.port3
+ALUS1 <= Encoder8to3:j0.port2
+ALUS0 <= Encoder8to3:j0.port1
+DatamemoryRead <= DatamemoryRead.DB_MAX_OUTPUT_PORT_TYPE
+DatamemoryWrite <= DatamemoryWrite.DB_MAX_OUTPUT_PORT_TYPE
+InstructionmemoryRead <= InstructionmemoryRead.DB_MAX_OUTPUT_PORT_TYPE
+InstructionmemoryWrite <= InstructionmemoryWrite.DB_MAX_OUTPUT_PORT_TYPE
+Sel <= Sel.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ControlUnit|Controlgate:m1|Encoder8to3:j0
+I[0] => V.IN0
+I[0] => m6.IN0
+I[0] => m0.IN0
+I[1] => m0.IN1
+I[1] => V.IN1
+I[1] => m6.IN1
+I[2] => m1.IN1
+I[2] => V.IN1
+I[2] => m6.IN1
+I[3] => m2.IN1
+I[3] => V.IN1
+I[3] => m6.IN1
+I[4] => m3.IN1
+I[4] => V.IN1
+I[4] => m6.IN1
+I[5] => m4.IN1
+I[5] => V.IN1
+I[5] => m6.IN1
+I[6] => m5.IN1
+I[6] => V.IN1
+I[6] => m6.IN1
+I[7] => m6.IN1
+I[7] => V.IN1
+Q0 <= Q0.DB_MAX_OUTPUT_PORT_TYPE
+Q1 <= Q1.DB_MAX_OUTPUT_PORT_TYPE
+Q2 <= Q2.DB_MAX_OUTPUT_PORT_TYPE
+
+

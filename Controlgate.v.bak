@@ -1,0 +1,58 @@
+module Controlgate(I,R,E,FGI,FGO,D,T,AC,B,DR,PCload,PCincr,
+						       PCclear,ARload,ARincr,ARclear,DRload,DRincr,
+						       ACload,ACincr,ACclear,DARload,IRload,TRload,
+						       ALUS2,ALUS1,ALUS0,DatamemoryRead,DatamemoryWrite,
+						       InstructionmemoryRead,InstructionmemoryWrite);
+
+ 
+ input [7:0] D ;
+ input [6:0] T ;
+ input [7:0] DR ;
+ input [7:0] AC ;
+ input [9:0] B ;
+ input R,I,E,FGI,FGO ;
+ output PCload,PCincr,PCclear,ARload,ARincr,ARclear,
+		    DRload,DRincr,ACload,ACincr,ACclear,
+		    DARload,IRload,TRload,ALUS2,ALUS1,ALUS0,
+		    DatamemoryRead,DatamemoryWrite,InstructionmemoryRead,InstructionmemoryWrite ;
+		  
+ wire a1,a2,a3,a4,a5,a6,a7,a8,n0,n1,n2,n3,n4,n5,r,p ;
+ and S0(PCload,T[4],D[4]);
+ and S1(PCclear,T[1],R);
+ and S2(r,D[7],T[3],~I);
+ and S3(p,D[7],I,T[3]) ;
+ nor S4(a1,DR[0],DR[1],DR[2]);
+ nor S5(a2,DR[3],DR[4],DR[5]);
+ nor S6(a3,DR[6]|DR[7]);
+ and S7(a4,a1,a2,a3) ;
+ nor S8(a5,AC[0],AC[1],AC[2]);
+ nor S9(a6,AC[3],AC[4],AC[5]);
+ nor S10(a7,AC[6]|AC[7]);
+ and S11(a8,a5,a6,a7) ;
+ assign PCincr = (~R & T[1])|(a4&D[6]&T[6])|(~AC[7]&r&B[4])|(AC[7]&r&B[3])|(a8&r&B[2])|(~E&r&B[1])|(FGI&p&B[7])|(FGO&p&B[6]) ;
+ assign ARload = (~R&T[0])|(~R&T[2]) ;
+ assign ARincr = T[4]&D[5];
+ assign ARclear = R&T[0] ;
+ assign DRload = (D[0]&T[4])|(D[1]&T[4])|(D[2]&T[4])|(D[6]&T[4]) ;
+ assign DRincr = D[6]&T[5] ;
+ assign ACload = (D[0]&T[5])|(D[1]&T[5])|(D[2]&T[5])|(r&B[6])|(r&B[7])|(r&B[8]) ;
+ assign ACincr = r&B[5];
+ assign ACclear = r&B[9] ;
+ assign DARload = ~R&T[2] ;
+ assign IRload = ~R&T[1] ;
+ assign TRload = R&T[0] ;
+ assign InstructionmemoryRead =~R&T[1] ;
+ assign InstructionmemoryWrite =R&T[1] ;
+ assign DatamemoryRead = (D[0]&T[4])|(D[1]&T[4])|(D[6]&T[4]) ;
+ assign DatamemoryWrite = (D[3]&T[4])|(D[5]&T[4])|(D[6]&T[6]) ;
+ 
+ assign n0=(D[2]&T[5])|(p&B[9]) ;
+ assign n1=D[1]&T[5] ;
+ assign n2=D[0]&T[5] ;
+ assign n3=r&B[9] ;
+ assign n4=r&B[7] ;
+ assign n5=r&B[6] ;
+ 
+ Encoder8to3 j0(n0,n1,n2,n3,n4,n5,,,ALUS0,ALUS1,ALUS2);
+ 
+endmodule 

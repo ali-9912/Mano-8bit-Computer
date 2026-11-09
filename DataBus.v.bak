@@ -1,0 +1,11 @@
+module DataBus(X1,X0,AC,DR,B);
+ input X1,X0;
+ input [7:0] AC ;
+ input [7:0] DR ;
+ output wire [7:0] B ;
+ 
+ wire S,Y1,Y0 ;
+ Encoder2to1 n1(X1,X0,S) ;
+ Decoder1to2 n2(S,Y1,Y0) ;
+ 
+endmodule

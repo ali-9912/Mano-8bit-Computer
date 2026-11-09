@@ -1,0 +1,406 @@
+$comment
+	File created using the following command:
+		vcd file data_memory.msim.vcd -direction
+$end
+$date
+	Wed Jan 25 19:12:30 2023
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module data_memory_vlg_vec_tst $end
+$var reg 128 ! Address [127:0] $end
+$var reg 1 " Clock $end
+$var reg 8 # Datain [7:0] $end
+$var reg 1 $ Read $end
+$var reg 1 % Write $end
+$var wire 1 & Dataout [7] $end
+$var wire 1 ' Dataout [6] $end
+$var wire 1 ( Dataout [5] $end
+$var wire 1 ) Dataout [4] $end
+$var wire 1 * Dataout [3] $end
+$var wire 1 + Dataout [2] $end
+$var wire 1 , Dataout [1] $end
+$var wire 1 - Dataout [0] $end
+$scope module i1 $end
+$var wire 1 . gnd $end
+$var wire 1 / vcc $end
+$var wire 1 0 unknown $end
+$var tri1 1 1 devclrn $end
+$var tri1 1 2 devpor $end
+$var tri1 1 3 devoe $end
+$var wire 1 4 Write~combout $end
+$var wire 1 5 Read~combout $end
+$var wire 1 6 mem~0_combout $end
+$var wire 1 7 Clock~combout $end
+$var wire 1 8 Clock~clkctrl_outclk $end
+$var wire 1 9 mem_rtl_0|auto_generated|ram_block1a0~portbdataout $end
+$var wire 1 : Dataout[0]~enfeeder_combout $end
+$var wire 1 ; Dataout[0]~en_regout $end
+$var wire 1 < mem_rtl_0|auto_generated|ram_block1a1 $end
+$var wire 1 = Dataout[1]~enfeeder_combout $end
+$var wire 1 > Dataout[1]~en_regout $end
+$var wire 1 ? mem_rtl_0|auto_generated|ram_block1a2 $end
+$var wire 1 @ Dataout[2]~enfeeder_combout $end
+$var wire 1 A Dataout[2]~en_regout $end
+$var wire 1 B mem_rtl_0|auto_generated|ram_block1a3 $end
+$var wire 1 C Dataout[3]~enfeeder_combout $end
+$var wire 1 D Dataout[3]~en_regout $end
+$var wire 1 E mem_rtl_0|auto_generated|ram_block1a4 $end
+$var wire 1 F Dataout[4]~enfeeder_combout $end
+$var wire 1 G Dataout[4]~en_regout $end
+$var wire 1 H mem_rtl_0|auto_generated|ram_block1a5 $end
+$var wire 1 I Dataout[5]~enfeeder_combout $end
+$var wire 1 J Dataout[5]~en_regout $end
+$var wire 1 K mem_rtl_0|auto_generated|ram_block1a6 $end
+$var wire 1 L Dataout[6]~enfeeder_combout $end
+$var wire 1 M Dataout[6]~en_regout $end
+$var wire 1 N mem_rtl_0|auto_generated|ram_block1a7 $end
+$var wire 1 O Dataout[7]~enfeeder_combout $end
+$var wire 1 P Dataout[7]~en_regout $end
+$var wire 1 Q Address~combout [127] $end
+$var wire 1 R Address~combout [126] $end
+$var wire 1 S Address~combout [125] $end
+$var wire 1 T Address~combout [124] $end
+$var wire 1 U Address~combout [123] $end
+$var wire 1 V Address~combout [122] $end
+$var wire 1 W Address~combout [121] $end
+$var wire 1 X Address~combout [120] $end
+$var wire 1 Y Address~combout [119] $end
+$var wire 1 Z Address~combout [118] $end
+$var wire 1 [ Address~combout [117] $end
+$var wire 1 \ Address~combout [116] $end
+$var wire 1 ] Address~combout [115] $end
+$var wire 1 ^ Address~combout [114] $end
+$var wire 1 _ Address~combout [113] $end
+$var wire 1 ` Address~combout [112] $end
+$var wire 1 a Address~combout [111] $end
+$var wire 1 b Address~combout [110] $end
+$var wire 1 c Address~combout [109] $end
+$var wire 1 d Address~combout [108] $end
+$var wire 1 e Address~combout [107] $end
+$var wire 1 f Address~combout [106] $end
+$var wire 1 g Address~combout [105] $end
+$var wire 1 h Address~combout [104] $end
+$var wire 1 i Address~combout [103] $end
+$var wire 1 j Address~combout [102] $end
+$var wire 1 k Address~combout [101] $end
+$var wire 1 l Address~combout [100] $end
+$var wire 1 m Address~combout [99] $end
+$var wire 1 n Address~combout [98] $end
+$var wire 1 o Address~combout [97] $end
+$var wire 1 p Address~combout [96] $end
+$var wire 1 q Address~combout [95] $end
+$var wire 1 r Address~combout [94] $end
+$var wire 1 s Address~combout [93] $end
+$var wire 1 t Address~combout [92] $end
+$var wire 1 u Address~combout [91] $end
+$var wire 1 v Address~combout [90] $end
+$var wire 1 w Address~combout [89] $end
+$var wire 1 x Address~combout [88] $end
+$var wire 1 y Address~combout [87] $end
+$var wire 1 z Address~combout [86] $end
+$var wire 1 { Address~combout [85] $end
+$var wire 1 | Address~combout [84] $end
+$var wire 1 } Address~combout [83] $end
+$var wire 1 ~ Address~combout [82] $end
+$var wire 1 !! Address~combout [81] $end
+$var wire 1 "! Address~combout [80] $end
+$var wire 1 #! Address~combout [79] $end
+$var wire 1 $! Address~combout [78] $end
+$var wire 1 %! Address~combout [77] $end
+$var wire 1 &! Address~combout [76] $end
+$var wire 1 '! Address~combout [75] $end
+$var wire 1 (! Address~combout [74] $end
+$var wire 1 )! Address~combout [73] $end
+$var wire 1 *! Address~combout [72] $end
+$var wire 1 +! Address~combout [71] $end
+$var wire 1 ,! Address~combout [70] $end
+$var wire 1 -! Address~combout [69] $end
+$var wire 1 .! Address~combout [68] $end
+$var wire 1 /! Address~combout [67] $end
+$var wire 1 0! Address~combout [66] $end
+$var wire 1 1! Address~combout [65] $end
+$var wire 1 2! Address~combout [64] $end
+$var wire 1 3! Address~combout [63] $end
+$var wire 1 4! Address~combout [62] $end
+$var wire 1 5! Address~combout [61] $end
+$var wire 1 6! Address~combout [60] $end
+$var wire 1 7! Address~combout [59] $end
+$var wire 1 8! Address~combout [58] $end
+$var wire 1 9! Address~combout [57] $end
+$var wire 1 :! Address~combout [56] $end
+$var wire 1 ;! Address~combout [55] $end
+$var wire 1 <! Address~combout [54] $end
+$var wire 1 =! Address~combout [53] $end
+$var wire 1 >! Address~combout [52] $end
+$var wire 1 ?! Address~combout [51] $end
+$var wire 1 @! Address~combout [50] $end
+$var wire 1 A! Address~combout [49] $end
+$var wire 1 B! Address~combout [48] $end
+$var wire 1 C! Address~combout [47] $end
+$var wire 1 D! Address~combout [46] $end
+$var wire 1 E! Address~combout [45] $end
+$var wire 1 F! Address~combout [44] $end
+$var wire 1 G! Address~combout [43] $end
+$var wire 1 H! Address~combout [42] $end
+$var wire 1 I! Address~combout [41] $end
+$var wire 1 J! Address~combout [40] $end
+$var wire 1 K! Address~combout [39] $end
+$var wire 1 L! Address~combout [38] $end
+$var wire 1 M! Address~combout [37] $end
+$var wire 1 N! Address~combout [36] $end
+$var wire 1 O! Address~combout [35] $end
+$var wire 1 P! Address~combout [34] $end
+$var wire 1 Q! Address~combout [33] $end
+$var wire 1 R! Address~combout [32] $end
+$var wire 1 S! Address~combout [31] $end
+$var wire 1 T! Address~combout [30] $end
+$var wire 1 U! Address~combout [29] $end
+$var wire 1 V! Address~combout [28] $end
+$var wire 1 W! Address~combout [27] $end
+$var wire 1 X! Address~combout [26] $end
+$var wire 1 Y! Address~combout [25] $end
+$var wire 1 Z! Address~combout [24] $end
+$var wire 1 [! Address~combout [23] $end
+$var wire 1 \! Address~combout [22] $end
+$var wire 1 ]! Address~combout [21] $end
+$var wire 1 ^! Address~combout [20] $end
+$var wire 1 _! Address~combout [19] $end
+$var wire 1 `! Address~combout [18] $end
+$var wire 1 a! Address~combout [17] $end
+$var wire 1 b! Address~combout [16] $end
+$var wire 1 c! Address~combout [15] $end
+$var wire 1 d! Address~combout [14] $end
+$var wire 1 e! Address~combout [13] $end
+$var wire 1 f! Address~combout [12] $end
+$var wire 1 g! Address~combout [11] $end
+$var wire 1 h! Address~combout [10] $end
+$var wire 1 i! Address~combout [9] $end
+$var wire 1 j! Address~combout [8] $end
+$var wire 1 k! Address~combout [7] $end
+$var wire 1 l! Address~combout [6] $end
+$var wire 1 m! Address~combout [5] $end
+$var wire 1 n! Address~combout [4] $end
+$var wire 1 o! Address~combout [3] $end
+$var wire 1 p! Address~combout [2] $end
+$var wire 1 q! Address~combout [1] $end
+$var wire 1 r! Address~combout [0] $end
+$var wire 1 s! Datain~combout [7] $end
+$var wire 1 t! Datain~combout [6] $end
+$var wire 1 u! Datain~combout [5] $end
+$var wire 1 v! Datain~combout [4] $end
+$var wire 1 w! Datain~combout [3] $end
+$var wire 1 x! Datain~combout [2] $end
+$var wire 1 y! Datain~combout [1] $end
+$var wire 1 z! Datain~combout [0] $end
+$var wire 1 {! mem_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [7] $end
+$var wire 1 |! mem_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [6] $end
+$var wire 1 }! mem_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [5] $end
+$var wire 1 ~! mem_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [4] $end
+$var wire 1 !" mem_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [3] $end
+$var wire 1 "" mem_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [2] $end
+$var wire 1 #" mem_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [1] $end
+$var wire 1 $" mem_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx !
+x"
+bx #
+x$
+x%
+z-
+z,
+z+
+z*
+z)
+z(
+z'
+z&
+0.
+1/
+x0
+11
+12
+13
+x4
+x5
+x6
+x7
+x8
+09
+x:
+0;
+0<
+x=
+0>
+0?
+x@
+0A
+0B
+xC
+0D
+0E
+xF
+0G
+0H
+xI
+0J
+0K
+xL
+0M
+0N
+xO
+0P
+xr!
+xq!
+xp!
+xo!
+xn!
+xm!
+xl!
+zk!
+zj!
+zi!
+zh!
+zg!
+zf!
+ze!
+zd!
+zc!
+zb!
+za!
+z`!
+z_!
+z^!
+z]!
+z\!
+z[!
+zZ!
+zY!
+zX!
+zW!
+zV!
+zU!
+zT!
+zS!
+zR!
+zQ!
+zP!
+zO!
+zN!
+zM!
+zL!
+zK!
+zJ!
+zI!
+zH!
+zG!
+zF!
+zE!
+zD!
+zC!
+zB!
+zA!
+z@!
+z?!
+z>!
+z=!
+z<!
+z;!
+z:!
+z9!
+z8!
+z7!
+z6!
+z5!
+z4!
+z3!
+z2!
+z1!
+z0!
+z/!
+z.!
+z-!
+z,!
+z+!
+z*!
+z)!
+z(!
+z'!
+z&!
+z%!
+z$!
+z#!
+z"!
+z!!
+z~
+z}
+z|
+z{
+zz
+zy
+zx
+zw
+zv
+zu
+zt
+zs
+zr
+zq
+zp
+zo
+zn
+zm
+zl
+zk
+zj
+zi
+zh
+zg
+zf
+ze
+zd
+zc
+zb
+za
+z`
+z_
+z^
+z]
+z\
+z[
+zZ
+zY
+zX
+zW
+zV
+zU
+zT
+zS
+zR
+zQ
+xz!
+xy!
+xx!
+xw!
+xv!
+xu!
+xt!
+xs!
+0$"
+0#"
+0""
+0!"
+0~!
+0}!
+0|!
+0{!
+$end
+#1000000

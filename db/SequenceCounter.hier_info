@@ -1,0 +1,62 @@
+|SequenceCounter
+Reset => Reset.IN3
+Clock => Clock.IN3
+Q[0] <= T_FF:tff0.port0
+Q[1] <= T_FF:tff1.port0
+Q[2] <= T_FF:tff2.port0
+
+
+|SequenceCounter|T_FF:tff0
+Q <= D_FF:dff0.port0
+T => comb.IN1
+clk => clk.IN1
+reset => reset.IN1
+
+
+|SequenceCounter|T_FF:tff0|D_FF:dff0
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q_bar <= Q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => Q~reg0.DATAIN
+D => Q_bar~reg0.DATAIN
+clk => Q_bar~reg0.CLK
+clk => Q~reg0.CLK
+reset => Q_bar~reg0.PRESET
+reset => Q~reg0.ACLR
+
+
+|SequenceCounter|T_FF:tff1
+Q <= D_FF:dff0.port0
+T => comb.IN1
+clk => clk.IN1
+reset => reset.IN1
+
+
+|SequenceCounter|T_FF:tff1|D_FF:dff0
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q_bar <= Q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => Q~reg0.DATAIN
+D => Q_bar~reg0.DATAIN
+clk => Q_bar~reg0.CLK
+clk => Q~reg0.CLK
+reset => Q_bar~reg0.PRESET
+reset => Q~reg0.ACLR
+
+
+|SequenceCounter|T_FF:tff2
+Q <= D_FF:dff0.port0
+T => comb.IN1
+clk => clk.IN1
+reset => reset.IN1
+
+
+|SequenceCounter|T_FF:tff2|D_FF:dff0
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q_bar <= Q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => Q~reg0.DATAIN
+D => Q_bar~reg0.DATAIN
+clk => Q_bar~reg0.CLK
+clk => Q~reg0.CLK
+reset => Q_bar~reg0.PRESET
+reset => Q~reg0.ACLR
+
+

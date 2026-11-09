@@ -1,0 +1,12 @@
+module Decoder4to16(En,I,Q);
+ input En;
+ input [3:0] I ;
+ output [15:0] Q ;
+ wire [3:0] E ;
+ 
+ Decoder2to4 N1(En,[3:2]I,E);
+ /*Decoder2to4 N2();
+ Decoder2to4 N3();
+ Decoder2to4 N4();
+ Decoder2to4 N5();*/
+endmodule

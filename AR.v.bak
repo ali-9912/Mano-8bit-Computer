@@ -1,0 +1,26 @@
+module AR(I,Clock,LD,INCR,CL,W);
+ input [9:0] I ;
+ input Clock,LD,INCR,CL ;
+ output reg [9:0] W;
+ reg [0:9] AR ;
+  
+ always @(posedge Clock)
+   begin
+    if(LD) 
+     begin
+      AR<=I ;
+      W<=AR;
+     end
+    else if(INCR)
+     begin
+       AR<=AR+1 ;
+       W<=AR ;
+     end
+    else if(CL) 
+     begin 
+      AR<=0 ;
+      W<=AR ;
+     end
+   end
+endmodule
+ 

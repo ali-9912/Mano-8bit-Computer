@@ -1,0 +1,16 @@
+module Mux4to1(I3,I2,I1,I0,S1,S0,W);
+ input I3,I2,I1,I0,S1,S0 ;
+ output W ;
+ 
+ wire C0,C1,C2,C3,A0,A1 ;
+ 
+ not n0(A0,S0) ;
+ not n1(A1,S1) ;
+ and m0(C0,I0,A1,A0) ;
+ and m1(C1,I1,A1,S0) ;
+ and m2(C2,I2,S1,A0) ;
+ and m3(C3,I3,S1,S0) ;
+ or  q0(W,C0,C1,C2,C3) ;
+
+ endmodule
+ 

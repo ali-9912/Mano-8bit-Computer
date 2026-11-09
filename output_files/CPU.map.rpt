@@ -1,0 +1,690 @@
+Analysis & Synthesis report for CPU
+Mon Apr 10 22:52:07 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Logic Cells Representing Combinational Loops
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Port Connectivity Checks: "Processor:ins2|ALU:ins6|Mux4to1:a4"
+ 13. Port Connectivity Checks: "Processor:ins2"
+ 14. Port Connectivity Checks: "ControlUnit:ins1|Controlgate:m1|Encoder8to3:j0"
+ 15. Port Connectivity Checks: "ControlUnit:ins1|SequenceCounter:tribit|T_FF:tff0|D_FF:dff0"
+ 16. Port Connectivity Checks: "JK_FF:FGO_ff"
+ 17. Port Connectivity Checks: "JK_FF:FGI_ff"
+ 18. Port Connectivity Checks: "JK_FF:R_ff"
+ 19. Port Connectivity Checks: "JK_FF:IEN_ff"
+ 20. Port Connectivity Checks: "JK_FF:E_ff"
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
+ 23. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Apr 10 22:52:06 2023           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; CPU                                             ;
+; Top-level Entity Name              ; CPU                                             ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 27,067                                          ;
+;     Total combinational functions  ; 11,739                                          ;
+;     Dedicated logic registers      ; 15,458                                          ;
+; Total registers                    ; 15458                                           ;
+; Total pins                         ; 22                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C70F896C6       ;                    ;
+; Top-level entity name                                                      ; CPU                ; CPU                ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                           ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                       ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------+---------+
+; CPU.v                            ; yes             ; User Verilog HDL File        ; E:/Program Files/FPGA/project/CPU.v                ;         ;
+; jk_ff.v                          ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/jk_ff.v              ;         ;
+; d_ff.v                           ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/d_ff.v               ;         ;
+; controlunit.v                    ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/controlunit.v        ;         ;
+; sequencecounter.v                ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/sequencecounter.v    ;         ;
+; t_ff.v                           ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/t_ff.v               ;         ;
+; decoder3to8.v                    ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/decoder3to8.v        ;         ;
+; controlgate.v                    ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/controlgate.v        ;         ;
+; encoder8to3.v                    ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/encoder8to3.v        ;         ;
+; processor.v                      ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/processor.v          ;         ;
+; pc.v                             ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/pc.v                 ;         ;
+; ar.v                             ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/ar.v                 ;         ;
+; ir.v                             ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/ir.v                 ;         ;
+; tr.v                             ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/tr.v                 ;         ;
+; accumulator.v                    ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/accumulator.v        ;         ;
+; alu.v                            ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/alu.v                ;         ;
+; fulladder8bit.v                  ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/fulladder8bit.v      ;         ;
+; fulladder.v                      ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/fulladder.v          ;         ;
+; logicunit8bit.v                  ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/logicunit8bit.v      ;         ;
+; logicunit.v                      ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/logicunit.v          ;         ;
+; shiftregister8bit.v              ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/shiftregister8bit.v  ;         ;
+; mux4to1.v                        ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/mux4to1.v            ;         ;
+; instruction_memory.v             ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/instruction_memory.v ;         ;
+; data_memory.v                    ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/data_memory.v        ;         ;
+; dar.v                            ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/dar.v                ;         ;
+; dr.v                             ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/dr.v                 ;         ;
+; addressbus.v                     ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/addressbus.v         ;         ;
+; encoder4to2.v                    ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/encoder4to2.v        ;         ;
+; decoder2to4.v                    ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/decoder2to4.v        ;         ;
+; databus.v                        ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/databus.v            ;         ;
+; encoder2to1.v                    ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/encoder2to1.v        ;         ;
+; decoder1to2.v                    ; yes             ; Auto-Found Verilog HDL File  ; E:/Program Files/FPGA/project/decoder1to2.v        ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------+---------+
+
+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Estimated Total logic elements              ; 27,067 ;
+;                                             ;        ;
+; Total combinational functions               ; 11739  ;
+; Logic element usage by number of LUT inputs ;        ;
+;     -- 4 input functions                    ; 11523  ;
+;     -- 3 input functions                    ; 134    ;
+;     -- <=2 input functions                  ; 82     ;
+;                                             ;        ;
+; Logic elements by mode                      ;        ;
+;     -- normal mode                          ; 11707  ;
+;     -- arithmetic mode                      ; 32     ;
+;                                             ;        ;
+; Total registers                             ; 15458  ;
+;     -- Dedicated logic registers            ; 15458  ;
+;     -- I/O registers                        ; 0      ;
+;                                             ;        ;
+; I/O pins                                    ; 22     ;
+; Embedded Multiplier 9-bit elements          ; 0      ;
+; Maximum fan-out node                        ; Clock  ;
+; Maximum fan-out                             ; 15458  ;
+; Total fan-out                               ; 93041  ;
+; Average fan-out                             ; 3.42   ;
++---------------------------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                            ;
++---------------------------------+-------------------+---------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers  ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                              ; Library Name ;
++---------------------------------+-------------------+---------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+--------------+
+; |CPU                            ; 11739 (10)        ; 15458 (0)     ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |CPU                                                             ; work         ;
+;    |AddressBus:ins7|            ; 36 (35)           ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|AddressBus:ins7                                             ; work         ;
+;       |Decoder2to4:n2|          ; 1 (1)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|AddressBus:ins7|Decoder2to4:n2                              ; work         ;
+;    |ControlUnit:ins1|           ; 56 (0)            ; 3 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ControlUnit:ins1                                            ; work         ;
+;       |Controlgate:m1|          ; 50 (44)           ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ControlUnit:ins1|Controlgate:m1                             ; work         ;
+;          |Encoder8to3:j0|       ; 6 (6)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ControlUnit:ins1|Controlgate:m1|Encoder8to3:j0              ; work         ;
+;       |Decoder3to8:D1|          ; 3 (3)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ControlUnit:ins1|Decoder3to8:D1                             ; work         ;
+;       |SequenceCounter:tribit|  ; 3 (0)             ; 3 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ControlUnit:ins1|SequenceCounter:tribit                     ; work         ;
+;          |T_FF:tff0|            ; 1 (0)             ; 1 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ControlUnit:ins1|SequenceCounter:tribit|T_FF:tff0           ; work         ;
+;             |D_FF:dff0|         ; 1 (1)             ; 1 (1)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ControlUnit:ins1|SequenceCounter:tribit|T_FF:tff0|D_FF:dff0 ; work         ;
+;          |T_FF:tff1|            ; 1 (0)             ; 1 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ControlUnit:ins1|SequenceCounter:tribit|T_FF:tff1           ; work         ;
+;             |D_FF:dff0|         ; 1 (1)             ; 1 (1)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ControlUnit:ins1|SequenceCounter:tribit|T_FF:tff1|D_FF:dff0 ; work         ;
+;          |T_FF:tff2|            ; 1 (0)             ; 1 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ControlUnit:ins1|SequenceCounter:tribit|T_FF:tff2           ; work         ;
+;             |D_FF:dff0|         ; 1 (1)             ; 1 (1)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ControlUnit:ins1|SequenceCounter:tribit|T_FF:tff2|D_FF:dff0 ; work         ;
+;    |DAR:ins5|                   ; 0 (0)             ; 7 (7)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DAR:ins5                                                    ; work         ;
+;    |DR:ins6|                    ; 8 (8)             ; 8 (8)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DR:ins6                                                     ; work         ;
+;    |DataBus:ins8|               ; 8 (8)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DataBus:ins8                                                ; work         ;
+;    |JK_FF:E_ff|                 ; 1 (0)             ; 1 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|JK_FF:E_ff                                                  ; work         ;
+;       |D_FF:dff0|               ; 1 (1)             ; 1 (1)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|JK_FF:E_ff|D_FF:dff0                                        ; work         ;
+;    |JK_FF:FGI_ff|               ; 1 (1)             ; 1 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|JK_FF:FGI_ff                                                ; work         ;
+;       |D_FF:dff0|               ; 0 (0)             ; 1 (1)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|JK_FF:FGI_ff|D_FF:dff0                                      ; work         ;
+;    |JK_FF:FGO_ff|               ; 1 (1)             ; 1 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|JK_FF:FGO_ff                                                ; work         ;
+;       |D_FF:dff0|               ; 0 (0)             ; 1 (1)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|JK_FF:FGO_ff|D_FF:dff0                                      ; work         ;
+;    |JK_FF:IEN_ff|               ; 2 (2)             ; 1 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|JK_FF:IEN_ff                                                ; work         ;
+;       |D_FF:dff0|               ; 0 (0)             ; 1 (1)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|JK_FF:IEN_ff|D_FF:dff0                                      ; work         ;
+;    |JK_FF:R_ff|                 ; 3 (3)             ; 1 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|JK_FF:R_ff                                                  ; work         ;
+;       |D_FF:dff0|               ; 0 (0)             ; 1 (1)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|JK_FF:R_ff|D_FF:dff0                                        ; work         ;
+;    |Processor:ins2|             ; 122 (0)           ; 52 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Processor:ins2                                              ; work         ;
+;       |ALU:ins6|                ; 36 (0)            ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Processor:ins2|ALU:ins6                                     ; work         ;
+;          |fulladder8bit:a1|     ; 15 (0)            ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Processor:ins2|ALU:ins6|fulladder8bit:a1                    ; work         ;
+;             |fulladder:bit1|    ; 2 (2)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Processor:ins2|ALU:ins6|fulladder8bit:a1|fulladder:bit1     ; work         ;
+;             |fulladder:bit3|    ; 4 (4)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Processor:ins2|ALU:ins6|fulladder8bit:a1|fulladder:bit3     ; work         ;
+;             |fulladder:bit4|    ; 1 (1)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Processor:ins2|ALU:ins6|fulladder8bit:a1|fulladder:bit4     ; work         ;
+;             |fulladder:bit5|    ; 2 (2)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Processor:ins2|ALU:ins6|fulladder8bit:a1|fulladder:bit5     ; work         ;
+;             |fulladder:bit6|    ; 2 (2)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Processor:ins2|ALU:ins6|fulladder8bit:a1|fulladder:bit6     ; work         ;
+;             |fulladder:bit7|    ; 4 (4)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Processor:ins2|ALU:ins6|fulladder8bit:a1|fulladder:bit7     ; work         ;
+;          |logicunit8bit:a2|     ; 4 (0)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Processor:ins2|ALU:ins6|logicunit8bit:a2                    ; work         ;
+;             |logicunit:bit1|    ; 1 (1)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Processor:ins2|ALU:ins6|logicunit8bit:a2|logicunit:bit1     ; work         ;
+;             |logicunit:bit3|    ; 1 (1)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Processor:ins2|ALU:ins6|logicunit8bit:a2|logicunit:bit3     ; work         ;
+;             |logicunit:bit5|    ; 1 (1)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Processor:ins2|ALU:ins6|logicunit8bit:a2|logicunit:bit5     ; work         ;
+;             |logicunit:bit7|    ; 1 (1)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Processor:ins2|ALU:ins6|logicunit8bit:a2|logicunit:bit7     ; work         ;
+;          |shiftregister8bit:a3| ; 17 (17)           ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Processor:ins2|ALU:ins6|shiftregister8bit:a3                ; work         ;
+;       |AR:ins2|                 ; 20 (20)           ; 10 (10)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Processor:ins2|AR:ins2                                      ; work         ;
+;       |Accumulator:ins5|        ; 44 (44)           ; 8 (8)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Processor:ins2|Accumulator:ins5                             ; work         ;
+;       |IR:ins3|                 ; 0 (0)             ; 14 (14)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Processor:ins2|IR:ins3                                      ; work         ;
+;       |PC:ins1|                 ; 22 (22)           ; 10 (10)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Processor:ins2|PC:ins1                                      ; work         ;
+;       |TR:ins4|                 ; 0 (0)             ; 10 (10)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Processor:ins2|TR:ins4                                      ; work         ;
+;    |data_memory:ins4|           ; 854 (854)         ; 1032 (1032)   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|data_memory:ins4                                            ; work         ;
+;    |instruction_Memory:ins3|    ; 10637 (10637)     ; 14351 (14351) ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|instruction_Memory:ins3                                     ; work         ;
++---------------------------------+-------------------+---------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops               ;
++--------------------------------------------------------+---+
+; Logic Cell Name                                        ;   ;
++--------------------------------------------------------+---+
+; Processor:ins2|ALU:ins6|shiftregister8bit:a3|out[0]    ;   ;
+; Processor:ins2|ALU:ins6|shiftregister8bit:a3|out[2]    ;   ;
+; Processor:ins2|ALU:ins6|shiftregister8bit:a3|out[4]    ;   ;
+; Processor:ins2|ALU:ins6|shiftregister8bit:a3|out[6]    ;   ;
+; Number of logic cells representing combinational loops ; 4 ;
++--------------------------------------------------------+---+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                          ;
++----------------------------------------+----------------------------------------------------+
+; Register name                          ; Reason for Removal                                 ;
++----------------------------------------+----------------------------------------------------+
+; data_memory:ins4|Dataout[0]~en         ; Lost fanout                                        ;
+; data_memory:ins4|Dataout[1]~en         ; Lost fanout                                        ;
+; data_memory:ins4|Dataout[2]~en         ; Lost fanout                                        ;
+; data_memory:ins4|Dataout[3]~en         ; Lost fanout                                        ;
+; data_memory:ins4|Dataout[4]~en         ; Lost fanout                                        ;
+; data_memory:ins4|Dataout[5]~en         ; Lost fanout                                        ;
+; data_memory:ins4|Dataout[6]~en         ; Lost fanout                                        ;
+; data_memory:ins4|Dataout[7]~en         ; Lost fanout                                        ;
+; JK_FF:FGO_ff|D_FF:dff0|Q_bar           ; Merged with JK_FF:FGO_ff|D_FF:dff0|Q               ;
+; JK_FF:FGI_ff|D_FF:dff0|Q_bar           ; Merged with JK_FF:FGI_ff|D_FF:dff0|Q               ;
+; JK_FF:R_ff|D_FF:dff0|Q_bar             ; Merged with JK_FF:R_ff|D_FF:dff0|Q                 ;
+; JK_FF:IEN_ff|D_FF:dff0|Q_bar           ; Merged with JK_FF:IEN_ff|D_FF:dff0|Q               ;
+; JK_FF:E_ff|D_FF:dff0|Q_bar             ; Merged with JK_FF:E_ff|D_FF:dff0|Q                 ;
+; instruction_Memory:ins3|Dataout[0]~en  ; Merged with instruction_Memory:ins3|Dataout[13]~en ;
+; instruction_Memory:ins3|Dataout[1]~en  ; Merged with instruction_Memory:ins3|Dataout[13]~en ;
+; instruction_Memory:ins3|Dataout[2]~en  ; Merged with instruction_Memory:ins3|Dataout[13]~en ;
+; instruction_Memory:ins3|Dataout[3]~en  ; Merged with instruction_Memory:ins3|Dataout[13]~en ;
+; instruction_Memory:ins3|Dataout[4]~en  ; Merged with instruction_Memory:ins3|Dataout[13]~en ;
+; instruction_Memory:ins3|Dataout[5]~en  ; Merged with instruction_Memory:ins3|Dataout[13]~en ;
+; instruction_Memory:ins3|Dataout[6]~en  ; Merged with instruction_Memory:ins3|Dataout[13]~en ;
+; instruction_Memory:ins3|Dataout[7]~en  ; Merged with instruction_Memory:ins3|Dataout[13]~en ;
+; instruction_Memory:ins3|Dataout[8]~en  ; Merged with instruction_Memory:ins3|Dataout[13]~en ;
+; instruction_Memory:ins3|Dataout[9]~en  ; Merged with instruction_Memory:ins3|Dataout[13]~en ;
+; instruction_Memory:ins3|Dataout[10]~en ; Merged with instruction_Memory:ins3|Dataout[13]~en ;
+; instruction_Memory:ins3|Dataout[11]~en ; Merged with instruction_Memory:ins3|Dataout[13]~en ;
+; instruction_Memory:ins3|Dataout[12]~en ; Merged with instruction_Memory:ins3|Dataout[13]~en ;
+; Total Number of Removed Registers = 26 ;                                                    ;
++----------------------------------------+----------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 15458 ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 10    ;
+; Number of registers using Asynchronous Clear ; 8     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 15434 ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; 5:1                ; 14 bits   ; 42 LEs        ; 14 LEs               ; 28 LEs                 ; Yes        ; |CPU|instruction_Memory:ins3|mem[10][7]                ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 14 LEs               ; 28 LEs                 ; Yes        ; |CPU|instruction_Memory:ins3|mem[9][9]                 ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 14 LEs               ; 28 LEs                 ; Yes        ; |CPU|instruction_Memory:ins3|mem[8][9]                 ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 14 LEs               ; 28 LEs                 ; Yes        ; |CPU|instruction_Memory:ins3|mem[7][9]                 ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 14 LEs               ; 28 LEs                 ; Yes        ; |CPU|instruction_Memory:ins3|mem[6][9]                 ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 14 LEs               ; 28 LEs                 ; Yes        ; |CPU|instruction_Memory:ins3|mem[5][9]                 ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 14 LEs               ; 28 LEs                 ; Yes        ; |CPU|instruction_Memory:ins3|mem[4][3]                 ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 14 LEs               ; 28 LEs                 ; Yes        ; |CPU|instruction_Memory:ins3|mem[3][6]                 ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 14 LEs               ; 28 LEs                 ; Yes        ; |CPU|instruction_Memory:ins3|mem[2][12]                ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 14 LEs               ; 28 LEs                 ; Yes        ; |CPU|instruction_Memory:ins3|mem[1][8]                 ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |CPU|data_memory:ins4|mem[4][2]                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |CPU|data_memory:ins4|mem[3][0]                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |CPU|data_memory:ins4|mem[2][1]                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |CPU|data_memory:ins4|mem[1][7]                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |CPU|data_memory:ins4|mem[0][3]                        ;
+; 128:1              ; 8 bits    ; 680 LEs       ; 680 LEs              ; 0 LEs                  ; Yes        ; |CPU|data_memory:ins4|Dataout[5]~reg0                  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |CPU|DR:ins6|W[0]                                      ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |CPU|Processor:ins2|PC:ins1|W[4]                       ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |CPU|Processor:ins2|AR:ins2|W[6]                       ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; Yes        ; |CPU|Processor:ins2|Accumulator:ins5|W[4]              ;
+; 1024:1             ; 14 bits   ; 9548 LEs      ; 9548 LEs             ; 0 LEs                  ; Yes        ; |CPU|instruction_Memory:ins3|Dataout[1]~reg0           ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|Processor:ins2|ALU:ins6|shiftregister8bit:a3|Mux7 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "Processor:ins2|ALU:ins6|Mux4to1:a4" ;
++------+-------+----------+--------------------------------------+
+; Port ; Type  ; Severity ; Details                              ;
++------+-------+----------+--------------------------------------+
+; D    ; Input ; Info     ; Explicitly unconnected               ;
++------+-------+----------+--------------------------------------+
+
+
++--------------------------------------------+
+; Port Connectivity Checks: "Processor:ins2" ;
++------+-------+----------+------------------+
+; Port ; Type  ; Severity ; Details          ;
++------+-------+----------+------------------+
+; C_in ; Input ; Info     ; Stuck at GND     ;
++------+-------+----------+------------------+
+
+
++----------------------------------------------------------------------------+
+; Port Connectivity Checks: "ControlUnit:ins1|Controlgate:m1|Encoder8to3:j0" ;
++---------+-------+----------+-----------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                       ;
++---------+-------+----------+-----------------------------------------------+
+; I[7..6] ; Input ; Info     ; Stuck at GND                                  ;
++---------+-------+----------+-----------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ControlUnit:ins1|SequenceCounter:tribit|T_FF:tff0|D_FF:dff0" ;
++-------+--------+----------+-------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                     ;
++-------+--------+----------+-------------------------------------------------------------+
+; Q_bar ; Output ; Info     ; Explicitly unconnected                                      ;
++-------+--------+----------+-------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "JK_FF:FGO_ff"                                                                                             ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Q_bar ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "JK_FF:FGI_ff"                                                                                             ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Q_bar ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "JK_FF:R_ff"                                                                                               ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Q_bar ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "JK_FF:IEN_ff"                                                                                             ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Q_bar ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "JK_FF:E_ff"                                                                                               ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; K     ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; Q_bar ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:54     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Apr 10 22:51:05 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Warning (10275): Verilog HDL Module Instantiation warning at CPU.v(23): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at CPU.v(24): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at CPU.v(25): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at CPU.v(26): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at CPU.v(27): ignored dangling comma in List of Port Connections
+Info (12021): Found 1 design units, including 1 entities, in source file cpu.v
+    Info (12023): Found entity 1: CPU
+Warning (10236): Verilog HDL Implicit Net warning at CPU.v(24): created implicit net for "IENout"
+Info (12127): Elaborating entity "CPU" for the top level hierarchy
+Warning (12125): Using design file jk_ff.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: JK_FF
+Info (12128): Elaborating entity "JK_FF" for hierarchy "JK_FF:E_ff"
+Warning (12125): Using design file d_ff.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: D_FF
+Info (12128): Elaborating entity "D_FF" for hierarchy "JK_FF:E_ff|D_FF:dff0"
+Warning (12125): Using design file controlunit.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ControlUnit
+Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:ins1"
+Warning (12125): Using design file sequencecounter.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: SequenceCounter
+Info (12128): Elaborating entity "SequenceCounter" for hierarchy "ControlUnit:ins1|SequenceCounter:tribit"
+Warning (12125): Using design file t_ff.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: T_FF
+Info (12128): Elaborating entity "T_FF" for hierarchy "ControlUnit:ins1|SequenceCounter:tribit|T_FF:tff0"
+Warning (12125): Using design file decoder3to8.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Decoder3to8
+Info (12128): Elaborating entity "Decoder3to8" for hierarchy "ControlUnit:ins1|Decoder3to8:D1"
+Warning (12125): Using design file controlgate.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Controlgate
+Info (12128): Elaborating entity "Controlgate" for hierarchy "ControlUnit:ins1|Controlgate:m1"
+Warning (12125): Using design file encoder8to3.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Encoder8to3
+Info (12128): Elaborating entity "Encoder8to3" for hierarchy "ControlUnit:ins1|Controlgate:m1|Encoder8to3:j0"
+Warning (12125): Using design file processor.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Processor
+Info (12128): Elaborating entity "Processor" for hierarchy "Processor:ins2"
+Warning (12125): Using design file pc.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: PC
+Info (12128): Elaborating entity "PC" for hierarchy "Processor:ins2|PC:ins1"
+Warning (10230): Verilog HDL assignment warning at pc.v(9): truncated value with size 32 to match size of target (10)
+Warning (12125): Using design file ar.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: AR
+Info (12128): Elaborating entity "AR" for hierarchy "Processor:ins2|AR:ins2"
+Warning (12125): Using design file ir.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: IR
+Info (12128): Elaborating entity "IR" for hierarchy "Processor:ins2|IR:ins3"
+Warning (12125): Using design file tr.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: TR
+Info (12128): Elaborating entity "TR" for hierarchy "Processor:ins2|TR:ins4"
+Warning (12125): Using design file accumulator.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Accumulator
+Info (12128): Elaborating entity "Accumulator" for hierarchy "Processor:ins2|Accumulator:ins5"
+Warning (12125): Using design file alu.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ALU
+Info (12128): Elaborating entity "ALU" for hierarchy "Processor:ins2|ALU:ins6"
+Warning (12125): Using design file fulladder8bit.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: fulladder8bit
+Info (12128): Elaborating entity "fulladder8bit" for hierarchy "Processor:ins2|ALU:ins6|fulladder8bit:a1"
+Warning (12125): Using design file fulladder.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: fulladder
+Info (12128): Elaborating entity "fulladder" for hierarchy "Processor:ins2|ALU:ins6|fulladder8bit:a1|fulladder:bit0"
+Warning (12125): Using design file logicunit8bit.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: logicunit8bit
+Info (12128): Elaborating entity "logicunit8bit" for hierarchy "Processor:ins2|ALU:ins6|logicunit8bit:a2"
+Warning (12125): Using design file logicunit.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: logicunit
+Info (12128): Elaborating entity "logicunit" for hierarchy "Processor:ins2|ALU:ins6|logicunit8bit:a2|logicunit:bit0"
+Warning (10235): Verilog HDL Always Construct warning at logicunit.v(15): variable "C0" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at logicunit.v(16): variable "C1" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (12125): Using design file shiftregister8bit.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: shiftregister8bit
+Info (12128): Elaborating entity "shiftregister8bit" for hierarchy "Processor:ins2|ALU:ins6|shiftregister8bit:a3"
+Warning (10235): Verilog HDL Always Construct warning at shiftregister8bit.v(10): variable "I" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at shiftregister8bit.v(11): variable "MSB" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at shiftregister8bit.v(11): variable "out" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at shiftregister8bit.v(12): variable "out" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at shiftregister8bit.v(12): variable "LSB" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (12125): Using design file mux4to1.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Mux4to1
+Info (12128): Elaborating entity "Mux4to1" for hierarchy "Processor:ins2|ALU:ins6|Mux4to1:a4"
+Warning (12125): Using design file instruction_memory.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: instruction_Memory
+Info (12128): Elaborating entity "instruction_Memory" for hierarchy "instruction_Memory:ins3"
+Warning (12125): Using design file data_memory.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: data_memory
+Info (12128): Elaborating entity "data_memory" for hierarchy "data_memory:ins4"
+Warning (12125): Using design file dar.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: DAR
+Info (12128): Elaborating entity "DAR" for hierarchy "DAR:ins5"
+Warning (12125): Using design file dr.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: DR
+Info (12128): Elaborating entity "DR" for hierarchy "DR:ins6"
+Warning (12125): Using design file addressbus.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: AddressBus
+Info (12128): Elaborating entity "AddressBus" for hierarchy "AddressBus:ins7"
+Warning (12125): Using design file encoder4to2.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Encoder4to2
+Info (12128): Elaborating entity "Encoder4to2" for hierarchy "AddressBus:ins7|Encoder4to2:n1"
+Warning (12125): Using design file decoder2to4.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Decoder2to4
+Info (12128): Elaborating entity "Decoder2to4" for hierarchy "AddressBus:ins7|Decoder2to4:n2"
+Warning (12125): Using design file databus.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: DataBus
+Info (12128): Elaborating entity "DataBus" for hierarchy "DataBus:ins8"
+Warning (12125): Using design file encoder2to1.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Encoder2to1
+Info (12128): Elaborating entity "Encoder2to1" for hierarchy "DataBus:ins8|Encoder2to1:n1"
+Warning (12125): Using design file decoder1to2.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Decoder1to2
+Info (12128): Elaborating entity "Decoder1to2" for hierarchy "DataBus:ins8|Decoder1to2:n2"
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13049): Converted tri-state buffer "AddressBus:ins7|Encoder4to2:n1|Q[1]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "AddressBus:ins7|Encoder4to2:n1|Q[0]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "data_memory:ins4|Dataout[0]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "data_memory:ins4|Dataout[1]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "data_memory:ins4|Dataout[2]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "data_memory:ins4|Dataout[3]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "data_memory:ins4|Dataout[4]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "data_memory:ins4|Dataout[5]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "data_memory:ins4|Dataout[6]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "data_memory:ins4|Dataout[7]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "ControlUnit:ins1|Controlgate:m1|Encoder8to3:j0|Q[2]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "ControlUnit:ins1|Controlgate:m1|Encoder8to3:j0|Q[1]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "ControlUnit:ins1|Controlgate:m1|Encoder8to3:j0|Q[0]" feeding internal logic into a wire
+Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13047): Converted the fan-out from the tri-state buffer "AddressBus:ins7|m65" to the node "Processor:ins2|IR:ins3|W[13]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "AddressBus:ins7|m59" to the node "Processor:ins2|IR:ins3|W[10]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "AddressBus:ins7|m61" to the node "Processor:ins2|IR:ins3|W[11]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "AddressBus:ins7|m63" to the node "Processor:ins2|IR:ins3|W[12]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus:ins8|Encoder2to1:n1|S" to the node "DataBus:ins8|m1" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus:ins8|Encoder2to1:n1|S" to the node "DataBus:ins8|m3" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus:ins8|Encoder2to1:n1|S" to the node "DataBus:ins8|m5" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus:ins8|Encoder2to1:n1|S" to the node "DataBus:ins8|m7" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus:ins8|Encoder2to1:n1|S" to the node "DataBus:ins8|m9" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus:ins8|Encoder2to1:n1|S" to the node "DataBus:ins8|m11" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus:ins8|Encoder2to1:n1|S" to the node "DataBus:ins8|m13" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus:ins8|Encoder2to1:n1|S" to the node "DataBus:ins8|m15" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus:ins8|Encoder2to1:n1|S" to the node "DataBus:ins8|m0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus:ins8|Encoder2to1:n1|S" to the node "DataBus:ins8|m2" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus:ins8|Encoder2to1:n1|S" to the node "DataBus:ins8|m4" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus:ins8|Encoder2to1:n1|S" to the node "DataBus:ins8|m6" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus:ins8|Encoder2to1:n1|S" to the node "DataBus:ins8|m8" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus:ins8|Encoder2to1:n1|S" to the node "DataBus:ins8|m10" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus:ins8|Encoder2to1:n1|S" to the node "DataBus:ins8|m12" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "instruction_Memory:ins3|Dataout[13]" to the node "AddressBus:ins7|m65" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "instruction_Memory:ins3|Dataout[10]" to the node "AddressBus:ins7|m59" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "instruction_Memory:ins3|Dataout[11]" to the node "AddressBus:ins7|m61" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "instruction_Memory:ins3|Dataout[12]" to the node "AddressBus:ins7|m63" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus:ins8|Encoder2to1:n1|S" to the node "DataBus:ins8|m14" into an OR gate
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13047): Converted the fan-out from the tri-state buffer "AddressBus:ins7|m48" to the node "Processor:ins2|IR:ins3|W[8]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "AddressBus:ins7|m53" to the node "Processor:ins2|IR:ins3|W[9]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "AddressBus:ins7|m30" to the node "Processor:ins2|IR:ins3|W[5]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "AddressBus:ins7|m24" to the node "Processor:ins2|IR:ins3|W[4]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "AddressBus:ins7|m42" to the node "Processor:ins2|IR:ins3|W[7]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "AddressBus:ins7|m36" to the node "Processor:ins2|IR:ins3|W[6]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "AddressBus:ins7|m0" to the node "Processor:ins2|IR:ins3|W[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "AddressBus:ins7|m4" to the node "Processor:ins2|IR:ins3|W[1]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "AddressBus:ins7|m18" to the node "Processor:ins2|IR:ins3|W[3]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "AddressBus:ins7|m8" to the node "Processor:ins2|IR:ins3|W[2]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus:ins8|m0" to the node "data_memory:ins4|mem[5][0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus:ins8|m2" to the node "data_memory:ins4|mem[5][1]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus:ins8|m4" to the node "data_memory:ins4|mem[5][2]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus:ins8|m6" to the node "data_memory:ins4|mem[5][3]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus:ins8|m8" to the node "data_memory:ins4|mem[5][4]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus:ins8|m10" to the node "data_memory:ins4|mem[5][5]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus:ins8|m12" to the node "data_memory:ins4|mem[5][6]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus:ins8|m14" to the node "data_memory:ins4|mem[5][7]" into an OR gate
+Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "DataBus:ins8|m0~synth"
+    Warning (13010): Node "DataBus:ins8|m2~synth"
+    Warning (13010): Node "DataBus:ins8|m4~synth"
+    Warning (13010): Node "DataBus:ins8|m6~synth"
+    Warning (13010): Node "DataBus:ins8|m8~synth"
+    Warning (13010): Node "DataBus:ins8|m10~synth"
+    Warning (13010): Node "DataBus:ins8|m12~synth"
+    Warning (13010): Node "DataBus:ins8|m14~synth"
+Info (17049): 8 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file E:/Program Files/FPGA/project/output_files/CPU.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 27146 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 10 output pins
+    Info (21061): Implemented 27124 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 114 warnings
+    Info: Peak virtual memory: 4674 megabytes
+    Info: Processing ended: Mon Apr 10 22:52:07 2023
+    Info: Elapsed time: 00:01:02
+    Info: Total CPU time (on all processors): 00:01:00
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in E:/Program Files/FPGA/project/output_files/CPU.map.smsg.
+
+

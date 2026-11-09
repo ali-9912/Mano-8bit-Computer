@@ -1,0 +1,19 @@
+//Behavioral description of a 8 bit shift register
+module shiftregister8bit(A,I,S,E,Clock,Clear);
+  input [7:0] I ;
+  input [1:0] S ;
+  input E,Clock,Clear ;
+  output reg [7:0] A ;
+  
+  always @(posedge Clock,negedge Clear)
+    begin
+	  if(~Clear) A<=8'b0 ;
+	  else
+	   case(S)
+		2'b00 : A<=A ;
+		2'b01 : A<= {E,A[7:1]} ;
+		2'b10 : A<= {A[6:0],E} ;
+		2'b11 : A<= I ;
+		endcase 
+	 end 
+endmodule 

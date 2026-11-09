@@ -1,0 +1,43 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\Program Files\FPGA\project\simulation\qsim
+vdata_memory
+Z1 !s100 GB>aQaTlPfY_POPG80eh[1
+Z2 Igz:o68nlG_CkFBY]PNEnf0
+Z3 V2]Hj;GA0Q7_DNV<G]Gn_=2
+Z4 dE:\Program Files\FPGA\project\simulation\qsim
+Z5 w1674661349
+Z6 8data_memory.vo
+Z7 Fdata_memory.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|data_memory.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1674661350.145000
+Z12 !s107 data_memory.vo|
+!s101 -O0
+vdata_memory_vlg_vec_tst
+!i10b 1
+Z13 !s100 R`mYLZhS^X>P;K00473We2
+Z14 IB=V@Rce]RSR_m=75]j^632
+Z15 VC;XghFW4m=VWLeeHXf`dM0
+R4
+w1674661348
+Z16 8data_memory.vt
+Z17 Fdata_memory.vt
+L0 29
+R8
+r1
+!s85 0
+31
+!s108 1674661350.364000
+!s107 data_memory.vt|
+Z18 !s90 -work|work|data_memory.vt|
+!s101 -O0
+R10

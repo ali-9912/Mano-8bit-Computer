@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Apr 08 14:10:25 2023
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : instruction_Memory
+Top-level Entity Name : instruction_Memory
+Family : Cyclone II
+Total logic elements : 24,958
+    Total combinational functions : 10,647
+    Dedicated logic registers : 14,364
+Total registers : 14364
+Total pins : 42
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
