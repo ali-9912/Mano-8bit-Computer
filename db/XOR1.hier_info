@@ -1,6 +1,0 @@
-|XOR1
-A => n0.IN0
-B => n0.IN1
-Q <= n0.DB_MAX_OUTPUT_PORT_TYPE
-
-

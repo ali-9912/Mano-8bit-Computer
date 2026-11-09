@@ -1,7 +1,0 @@
-module Decoder1to2(S,Y1,Y0);
- input S ;
- output Y1,Y0 ;
- 
- not n1(Y0,S) ;
- assign Y1=S ;
-endmodule

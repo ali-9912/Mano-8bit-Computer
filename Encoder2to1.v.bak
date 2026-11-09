@@ -1,6 +1,0 @@
-module Encoder2to1(X1,X0,S);
- input X1,X0 ;
- output S ;
- 
- assign S= ({X1,X0}==2'b01)? 1'b0 : ({X1,X0}==2'b10) ?1'b1 : 1'bz ;
-endmodule 

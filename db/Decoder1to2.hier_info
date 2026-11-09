@@ -1,7 +1,0 @@
-|Decoder1to2
-S => Y[1].DATAIN
-S => Y[0].DATAIN
-Y[0] <= S.DB_MAX_OUTPUT_PORT_TYPE
-Y[1] <= S.DB_MAX_OUTPUT_PORT_TYPE
-
-

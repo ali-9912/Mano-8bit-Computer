@@ -1,8 +1,0 @@
-module Decoder2to4(En,I,Q);
- input En ;
- input [1:0] I ;
- output [3:0] Q ;
- 
- assign Q[0] = ~En ? 1'b0 : I[0] ? 1'b1 : 1'b0 ;
-endmodule
- 
